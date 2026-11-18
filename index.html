@@ -208,6 +208,15 @@ const RD = (() => {
     }
   }
 
+  function linea(t, sep) {
+    const o = []; let f = '', q = false;
+    for (let i = 0; i < t.length; i++) {
+      const c = t[i];
+      if (q) { if (c === '"') { if (t[i + 1] === '"') { f += '"'; i++; } else q = false; } else f += c; }
+      else if (c === '"') q = true; else if (c === sep) { o.push(f); f = ''; } else f += c;
+    }
+    o.push(f); return o;
+  }
   async function leerCsv(blob, onHeader, onRow) {
     const rd = blob.stream().getReader(); const dec = new TextDecoder('utf-8');
     let buf = '', first = true, sep = null, stop = false;
@@ -231,8 +240,10 @@ const RD = (() => {
       if (value) buf += dec.decode(value, { stream: true });
       if (first && buf.charCodeAt(0) === 0xFEFF) buf = buf.slice(1);
       if (sep == null) { const l = buf.split('\n')[0]; sep = (l.split(';').length > l.split(',').length) ? ';' : ','; }
-      for (const r of parseLines(done)) {
+      for (let r of parseLines(done)) {
         if (r.length === 1 && r[0] === '') continue;
+        // fila "envuelta": Excel guardó cada línea entera entre comillas → volver a separarla
+        if (r.length === 1 && r[0].includes(sep)) r = linea(r[0], sep);
         const vals = r.map(x => { const t = x.trim(); if (t !== '' && /^-?\d+(\.\d+)?$/.test(t)) return +t; return t; });
         if (first) { first = false; if (onHeader(vals.map(x => String(x).trim())) === false) { stop = true; break; } }
         else onRow(vals);
@@ -403,7 +414,7 @@ const FB_CENSO = {
   appId: "1:790674955172:web:963217e7b972e0d426ff31"
 };
 const ROOT = 'galaxia';
-const AGG_VER = '2'; // subir cuando cambia cómo se resume un archivo (invalida el caché)
+const AGG_VER = '3'; // subir cuando cambia cómo se resume un archivo (invalida el caché)
 const FB_VER = '10.12.2';
 
 // ---------- utilidades ----------
@@ -1196,8 +1207,8 @@ async function archivosSueltos(fl) {
 async function detectarTipos() {
   const cache = (await IDB.get('det')) || {};
   for (const f of FILES) {
-    const k = f.path + '|' + f.size + '|' + f.mod;
-    if (cache[k] !== undefined) f.det = cache[k];
+    const k = f.path + '|' + f.size + '|' + f.mod + '|' + AGG_VER;
+    if (cache[k] !== undefined && cache[k] !== null) f.det = cache[k];
     else { try { const file = f.file || await f.h.getFile(); f.det = AG.detectar(await RD.encabezado(file, f.name)); } catch (e) { f.det = null; f.est = 'no se pudo leer'; } cache[k] = f.det; }
     if (SEL[f.path] === undefined) SEL[f.path] = !!f.det;
   }
