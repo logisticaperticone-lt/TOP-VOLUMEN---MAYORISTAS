@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/png;base64,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">
+<title>Top Volumen y Mayoristas · Logística Total</title>
+<style>
+:root{--bg:#141414;--bg2:#1d1d1d;--bg3:#262626;--line:#343434;--ink:#ececec;--ink2:#b5b5b5;--ink3:#8a8a8a;--acc:#f07a1e;--acc2:#ffa552;--ok:#3fb27f;--warn:#e8b83a;--bad:#e5534b;--blue:#4a9eda}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:13px/1.4 "Segoe UI",system-ui,Roboto,Arial,sans-serif}
+header{display:flex;align-items:center;gap:14px;padding:10px 18px;background:#0d0d0d;border-bottom:3px solid var(--acc)}
+header img{height:40px}
+header h1{font-size:17px;margin:0;font-weight:700;letter-spacing:.3px}
+header .sub{font-size:11.5px;color:var(--ink3)}
+.usr{margin-left:auto;display:flex;gap:8px;align-items:center;font-size:12px;color:var(--ink2)}
+.usr b{color:#fff}.lk{color:var(--acc2);cursor:pointer;text-decoration:underline}
+.adm{background:var(--acc);color:#141414;border-radius:6px;padding:1px 7px;font-weight:700}
+#fresh{display:flex;flex-wrap:wrap;gap:6px;padding:7px 18px;background:#111;border-bottom:1px solid var(--line);font-size:11.5px;align-items:center}
+.pill{border:1px solid var(--line);border-radius:12px;padding:2px 9px;color:var(--ink2);background:var(--bg2)}
+.pill b{color:var(--ink)}
+.pill.ok{border-color:#2c6b4f}.pill.ok b{color:var(--ok)}
+.pill.warn{border-color:#7a6420}.pill.warn b{color:var(--warn)}
+.pill.bad{border-color:#7a2f2b}.pill.bad b{color:var(--bad)}
+nav{display:flex;gap:2px;padding:0 18px;background:#111;border-bottom:1px solid var(--line);overflow-x:auto}
+nav button{background:none;border:0;color:var(--ink2);padding:10px 14px;font:600 13px inherit;font-family:inherit;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap}
+nav button:hover{color:#fff}
+nav button.on{color:#fff;border-bottom-color:var(--acc)}
+.filters{display:flex;flex-wrap:wrap;gap:10px;padding:10px 18px;background:var(--bg2);border-bottom:1px solid var(--line);align-items:flex-end}
+.filters label{display:flex;flex-direction:column;font-size:10.5px;color:var(--ink3);text-transform:uppercase;letter-spacing:.4px;gap:3px}
+select,input,textarea,button{font:inherit;color:var(--ink);background:var(--bg3);border:1px solid #444;border-radius:6px;padding:5px 8px}
+textarea{width:100%;resize:vertical}
+button{cursor:pointer}
+button.pri{background:var(--acc);color:#141414;border-color:var(--acc);font-weight:700}
+button.pri:hover{background:var(--acc2)}
+button.sm{padding:2px 8px;font-size:12px}
+button:disabled{opacity:.5;cursor:default}
+main{padding:16px 18px 60px}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:16px}
+.card h2{margin:0 0 4px;font-size:15px;color:var(--acc2);text-transform:uppercase;letter-spacing:.4px}
+.card .hint{color:var(--ink3);font-size:12px;margin-bottom:10px}
+.kpis{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+.kpi{background:var(--bg2);border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:8px;padding:10px 14px;min-width:170px}
+.kpi .l{font-size:11px;color:var(--ink3);text-transform:uppercase}
+.kpi .v{font-size:22px;font-weight:700}
+.kpi .s{font-size:11.5px;color:var(--ink2)}
+.tw{overflow:auto;max-height:72vh;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:12.5px}
+th,td{padding:5px 8px;border-bottom:1px solid #2c2c2c;text-align:right;white-space:nowrap}
+th{position:sticky;top:0;background:#0f0f0f;color:var(--ink2);font-weight:600;z-index:2;cursor:pointer;user-select:none}
+th.grp{cursor:default;text-align:center;color:var(--acc2);border-bottom:1px solid var(--line)}
+tr.grp2 th{top:27px}
+td.l,th.l{text-align:left}
+td.c,th.c{text-align:center}
+td.bl,th.bl{border-left:1px solid #3a3a3a}
+tbody tr:hover td{background:#232323}
+tr.canal td{background:#2a1e12;font-weight:700;color:#fff;border-top:1px solid #5a3a1a}
+tr.tot td{background:#0f0f0f;font-weight:700}
+td.cli{max-width:290px;overflow:hidden;text-overflow:ellipsis}
+.mut{color:var(--ink3)}
+.up{color:var(--ok)}.down{color:var(--bad)}
+.b-ok{background:#1f4d39!important;color:#bff0d8}
+.b-bad{background:#5c1f1c!important;color:#ffd2cf}
+.b-warn{background:#5a4a14!important;color:#ffefb8}
+.b-aut{background:#1f3a5c!important;color:#cfe4ff}
+.tag{display:inline-block;border-radius:10px;padding:0 7px;font-size:11px;font-weight:700;line-height:18px}
+.t-cm{background:var(--bad);color:#fff}.t-top{background:var(--acc);color:#141414}.t-chess{background:#555;color:#fff}
+.st{display:inline-block;border-radius:10px;padding:0 8px;font-size:11px;font-weight:700;line-height:19px;cursor:pointer;border:1px solid transparent}
+.st-Pendiente{background:#3a3a3a;color:#ddd}.st-En{background:#5a4a14;color:#ffe9a6}.st-Completo{background:#1f4d39;color:#c6f3dc}.st-No{background:#26323d;color:#bcd}
+.q{display:inline-block;border-radius:6px;padding:0 6px;font-size:11px;font-weight:700}
+.q1{background:#5c1f1c;color:#ffd2cf}.q2{background:#5a4a14;color:#ffefb8}.q3{background:#1f4d39;color:#c6f3dc}.q4{background:#2e2e2e;color:#ccc}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:1100px){.grid2{grid-template-columns:1fr}}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+dialog{background:var(--bg2);color:var(--ink);border:1px solid var(--acc);border-radius:12px;padding:0;max-width:880px;width:94vw}
+dialog::backdrop{background:#000a}
+.dh{padding:12px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px}
+.dh b{font-size:15px}
+.db{padding:14px 16px;max-height:75vh;overflow:auto}
+.df{padding:10px 16px;border-top:1px solid var(--line);display:flex;gap:8px;justify-content:flex-end}
+.fl{display:grid;grid-template-columns:150px 1fr;gap:8px 12px;align-items:start;margin-bottom:10px}
+.fl>span{color:var(--ink3);font-size:12px;padding-top:6px}
+.box{background:var(--bg3);border:1px solid #3a3a3a;border-radius:8px;padding:10px 12px;margin-bottom:10px;font-size:12.5px}
+.box.sug{border-left:4px solid var(--acc)}
+.msg{margin-top:8px;font-size:12.5px}
+#boot{padding:60px 20px;text-align:center;color:var(--ink2);font-size:14px}
+.prog{height:6px;background:#333;border-radius:3px;overflow:hidden;margin-top:6px}.prog i{display:block;height:100%;background:var(--acc);width:0}
+.info p,.info li{color:var(--ink2);font-size:13px;line-height:1.55}
+.info h3{color:var(--acc2);margin:14px 0 4px;font-size:14px}
+.chk td{text-align:left}
+.cell-in{cursor:pointer}
+.small{font-size:11.5px}
+.spark{vertical-align:middle}
+.err{background:#5c1f1c;color:#fff;padding:10px 18px}
+</style>
+</head>
+<body>
+<header>
+  <img id="logo" alt="" style="display:none">
+  <div><h1>Top Volumen · Canal Mayorista · Comportamiento Mayorista</h1>
+  <div class="sub">Manual Galaxia 2026 — 2.4.1.3 Clientes TOP por volumen · 2.4.1.6 Gestión del canal mayorista</div></div>
+  <div class="usr" id="usr"></div>
+</header>
+<div id="fresh"></div>
+<nav id="nav"></nav>
+<div class="filters" id="filters"></div>
+<main id="main"><div id="boot">Cargando…<div class="prog" style="max-width:320px;margin:10px auto"><i id="bootBar"></i></div></div></main>
+
+<dialog id="dlg"><div class="dh"><b id="dlgT"></b><span style="margin-left:auto" class="lk" onclick="cerrarDlg()">cerrar ✕</span></div><div class="db" id="dlgB"></div><div class="df" id="dlgF"></div></dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script>
+// ===== Lector liviano de .xlsx y .csv (streaming, sin librerías) =====
+// Lee archivos grandes (300 MB de XML) fila por fila sin cargar todo en memoria.
+// Uso: await leerArchivo(blob, nombre, onHeader(headers) -> false para cortar, onRow(arrayDeValores))
+const RD = (() => {
+  const td = new TextDecoder('utf-8');
+  async function u8(blob, a, b) { return new Uint8Array(await blob.slice(a, b).arrayBuffer()); }
+  const le16 = (d, o) => d[o] | (d[o + 1] << 8);
+  const le32 = (d, o) => (d[o] | (d[o + 1] << 8) | (d[o + 2] << 16) | (d[o + 3] << 24)) >>> 0;
+
+  async function zipEntries(blob) {
+    const n = blob.size, tail = await u8(blob, Math.max(0, n - 66000), n);
+    let e = -1;
+    for (let i = tail.length - 22; i >= 0; i--) if (le32(tail, i) === 0x06054b50) { e = i; break; }
+    if (e < 0) throw new Error('No es un .xlsx válido');
+    const cdSize = le32(tail, e + 12), cdOff = le32(tail, e + 16);
+    const cd = await u8(blob, cdOff, cdOff + cdSize);
+    const out = {};
+    for (let p = 0; p < cd.length && le32(cd, p) === 0x02014b50;) {
+      const method = le16(cd, p + 10), csize = le32(cd, p + 20), nl = le16(cd, p + 28), xl = le16(cd, p + 30), cl = le16(cd, p + 32), off = le32(cd, p + 42);
+      const name = td.decode(cd.subarray(p + 46, p + 46 + nl));
+      out[name] = { method, csize, off };
+      p += 46 + nl + xl + cl;
+    }
+    return out;
+  }
+  async function entryStream(blob, en) {
+    const h = await u8(blob, en.off, en.off + 30);
+    const start = en.off + 30 + le16(h, 26) + le16(h, 28);
+    const s = blob.slice(start, start + en.csize).stream();
+    if (en.method === 0) return s;
+    return s.pipeThrough(new DecompressionStream('deflate-raw'));
+  }
+  async function entryText(blob, en) {
+    const r = (await entryStream(blob, en)).getReader(), parts = []; const dec = new TextDecoder('utf-8');
+    for (;;) { const { value, done } = await r.read(); if (done) break; parts.push(dec.decode(value, { stream: true })); }
+    parts.push(dec.decode()); return parts.join('');
+  }
+  const ENT = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'" };
+  const unesc = s => s.indexOf('&') < 0 ? s : s.replace(/&(#x?[0-9a-fA-F]+|\w+);/g, (m, k) =>
+    k[0] === '#' ? String.fromCodePoint(k[1] === 'x' ? parseInt(k.slice(2), 16) : +k.slice(1)) : (ENT[k] ?? m));
+  function colIdx(ref) { let n = 0; for (let i = 0; i < ref.length; i++) { const c = ref.charCodeAt(i); if (c < 65 || c > 90) break; n = n * 26 + c - 64; } return n - 1; }
+
+  async function leerXlsx(blob, onHeader, onRow) {
+    const z = await zipEntries(blob);
+    // primera hoja
+    const wb = await entryText(blob, z['xl/workbook.xml']);
+    const rid = (wb.match(/<sheet\b[^>]*r:id="([^"]+)"/) || [])[1];
+    let target = 'xl/worksheets/sheet1.xml';
+    if (rid && z['xl/_rels/workbook.xml.rels']) {
+      const rels = await entryText(blob, z['xl/_rels/workbook.xml.rels']);
+      const m = rels.match(new RegExp('<Relationship\\b[^>]*Id="' + rid + '"[^>]*>')) || [];
+      const t = (m[0] || '').match(/Target="([^"]+)"/);
+      if (t) target = t[1].startsWith('/') ? t[1].slice(1) : 'xl/' + t[1].replace(/^\.\//, '');
+    }
+    const SS = [];
+    if (z['xl/sharedStrings.xml']) {
+      const ss = await entryText(blob, z['xl/sharedStrings.xml']);
+      const re = /<si>([\s\S]*?)<\/si>/g; let m;
+      while ((m = re.exec(ss))) { let t = ''; const r2 = /<t\b[^>]*>([^<]*)<\/t>/g; let k; while ((k = r2.exec(m[1]))) t += k[1]; SS.push(unesc(t)); }
+    }
+    if (!z[target]) throw new Error('No encontré la hoja en el archivo');
+    const rd = (await entryStream(blob, z[target])).getReader(); const dec = new TextDecoder('utf-8');
+    let buf = '', first = true, stop = false;
+    const cellRe = /<c\b([^>]*?)(?:\/>|>([\s\S]*?)<\/c>)/g;
+    function parseRow(x) {
+      const row = []; cellRe.lastIndex = 0; let m, pos = 0;
+      while ((m = cellRe.exec(x))) {
+        const at = m[1], inner = m[2];
+        const r = at.match(/\br="([A-Z]+)/); const ci = r ? colIdx(r[1]) : pos; pos = ci + 1;
+        if (inner == null) continue;
+        const t = (at.match(/\bt="(\w+)"/) || [])[1];
+        let v;
+        if (t === 'inlineStr') { let s = ''; const r2 = /<t\b[^>]*>([^<]*)<\/t>/g; let k; while ((k = r2.exec(inner))) s += k[1]; v = unesc(s); }
+        else {
+          const vm = inner.match(/<v>([^<]*)<\/v>/); if (!vm) continue;
+          if (t === 's') v = SS[+vm[1]]; else if (t === 'str' || t === 'e') v = unesc(vm[1]); else if (t === 'b') v = vm[1] === '1'; else v = +vm[1];
+        }
+        row[ci] = v;
+      }
+      return row;
+    }
+    for (;;) {
+      const { value, done } = await rd.read();
+      if (value) buf += dec.decode(value, { stream: true });
+      let i = 0, j;
+      while ((j = buf.indexOf('</row>', i)) >= 0) {
+        const s = buf.indexOf('<row', i);
+        const row = parseRow(buf.slice(s, j));
+        i = j + 6;
+        if (first) { first = false; if (onHeader(row.map(x => x == null ? '' : String(x).trim())) === false) { stop = true; break; } }
+        else onRow(row);
+      }
+      buf = buf.slice(i);
+      if (stop) { try { await rd.cancel(); } catch (e) {} break; }
+      if (done) break;
+    }
+  }
+
+  async function leerCsv(blob, onHeader, onRow) {
+    const rd = blob.stream().getReader(); const dec = new TextDecoder('utf-8');
+    let buf = '', first = true, sep = null, stop = false;
+    function parseLines(final) {
+      // parser CSV con comillas; procesa filas completas
+      let i = 0, row = [], f = '', q = false, start = 0; const n = buf.length; const rows = [];
+      for (; i < n; i++) {
+        const c = buf[i];
+        if (q) { if (c === '"') { if (buf[i + 1] === '"') { f += '"'; i++; } else q = false; } else f += c; }
+        else if (c === '"') q = true;
+        else if (c === sep) { row.push(f); f = ''; }
+        else if (c === '\n' || c === '\r') { if (c === '\r' && buf[i + 1] === '\n') i++; row.push(f); rows.push(row); row = []; f = ''; start = i + 1; }
+        else f += c;
+      }
+      if (final && (f !== '' || row.length)) { row.push(f); rows.push(row); start = n; }
+      buf = buf.slice(start);
+      return rows;
+    }
+    for (;;) {
+      const { value, done } = await rd.read();
+      if (value) buf += dec.decode(value, { stream: true });
+      if (first && buf.charCodeAt(0) === 0xFEFF) buf = buf.slice(1);
+      if (sep == null) { const l = buf.split('\n')[0]; sep = (l.split(';').length > l.split(',').length) ? ';' : ','; }
+      for (const r of parseLines(done)) {
+        if (r.length === 1 && r[0] === '') continue;
+        const vals = r.map(x => { const t = x.trim(); if (t !== '' && /^-?\d+(\.\d+)?$/.test(t)) return +t; return t; });
+        if (first) { first = false; if (onHeader(vals.map(x => String(x).trim())) === false) { stop = true; break; } }
+        else onRow(vals);
+      }
+      if (stop) { try { await rd.cancel(); } catch (e) {} break; }
+      if (done) break;
+    }
+  }
+  async function leerArchivo(blob, nombre, onHeader, onRow) {
+    const ext = (nombre.split('.').pop() || '').toLowerCase();
+    if (ext === 'csv' || ext === 'txt') return leerCsv(blob, onHeader, onRow);
+    if (ext === 'xlsx' || ext === 'xlsm') return leerXlsx(blob, onHeader, onRow);
+    throw new Error('Formato no soportado: .' + ext + ' (guardalo como .xlsx o .csv)');
+  }
+  async function encabezado(blob, nombre) { let h = null; await leerArchivo(blob, nombre, x => { h = x; return false; }, () => {}); return h || []; }
+  // fecha de Excel (número de serie) o texto "dd/mm/aaaa, hh:mm" → Date
+  function fecha(v) {
+    if (v == null || v === '') return null;
+    if (v instanceof Date) return v;
+    if (typeof v === 'number') return new Date(Math.round((v - 25569) * 86400000));
+    const m = String(v).match(/(\d{1,2})\/(\d{1,2})\/(\d{2,4})/);
+    if (m) return new Date(Date.UTC(+m[3] < 100 ? 2000 + +m[3] : +m[3], +m[2] - 1, +m[1]));
+    const d = new Date(v); return isNaN(d) ? null : d;
+  }
+  return { leerArchivo, encabezado, fecha };
+})();
+if (typeof module !== 'undefined') module.exports = RD;
+
+</script>
+<script>
+// ===== Detección de tipo de base y resumen por archivo =====
+const AG = (() => {
+  const N = s => String(s ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toUpperCase().replace(/\s+/g, ' ').trim();
+  const TIPOS = {
+    venta: { lab: 'Venta (Base)', req: ['COD. CLIENTE', 'CANTIDADES TOTALES', 'PERIODO', 'CODIGO ARTICULO'] },
+    wapi: { lab: 'WAPI (descuentos)', req: ['DESCUENTO $ SOBRE PN SF', 'COD. CLIENTE', 'TOTAL'] },
+    clientes: { lab: 'Clientes (Chess)', req: ['CLIENTE', 'RAZON SOCIAL', 'DESCRIPCION SUBCANAL'] },
+    activos: { lab: 'Activos fijos (EDF)', req: ['NUMERO DE ACTIVO', 'REPAGA?', 'CLIENTE'] },
+    estandar: { lab: 'Estándar de ejecución', req: ['PDV ID', 'SCORE TOTAL', 'TIPO'] },
+  };
+  function detectar(h) {
+    const H = h.map(N);
+    for (const [k, t] of Object.entries(TIPOS)) if (t.req.every(r => H.includes(r))) return k;
+    return null;
+  }
+  function ix(h, ...names) { const H = h.map(N); for (const n of names) { const i = H.indexOf(N(n)); if (i >= 0) return i; } return -1; }
+  const num = v => typeof v === 'number' ? v : (v == null || v === '' ? 0 : (+String(v).replace(/\./g, '').replace(',', '.') || 0));
+  const ymd = d => d ? d.getUTCFullYear() * 10000 + (d.getUTCMonth() + 1) * 100 + d.getUTCDate() : 0;
+  const ym = d => d ? d.getUTCFullYear() * 100 + (d.getUTCMonth() + 1) : 0;
+  const cod = v => { const s = String(v ?? '').replace(/\D/g, ''); if (!s) return 0; return +(s.length > 8 && s.startsWith('47311200') ? s.slice(8) : s.length > 8 && s.startsWith('473112') ? s.slice(6) : s); };
+
+  // Cada procesador devuelve {onHeader, onRow, fin()}  → fin() = resumen serializable
+  const PROC = {
+    venta() {
+      let c; const agg = new Map(), art = {}; let max = 0, min = 99999999, filas = 0;
+      return {
+        onHeader(h) { c = { f: ix(h, 'Período'), cli: ix(h, 'Cod. Cliente'), a: ix(h, 'Código articulo'), an: ix(h, 'nombre articulo'), m: ix(h, 'nombre marca'), cal: ix(h, 'Descripción calibre'), un: ix(h, 'Descripción unidad de negocio'), q: ix(h, 'Cantidades Totales'), net: ix(h, 'Importes Netos') }; },
+        onRow(r) {
+          const d = RD.fecha(r[c.f]); if (!d) return; const cli = cod(r[c.cli]); const a = +r[c.a] || 0; if (!cli || !a) return;
+          filas++; const k = ymd(d); if (k > max) max = k; if (k < min) min = k;
+          if (!art[a]) art[a] = [String(r[c.an] ?? ''), String(r[c.m] ?? ''), String(r[c.cal] ?? ''), String(r[c.un] ?? '')];
+          const kk = ym(d) + '|' + cli + '|' + a;
+          let o = agg.get(kk); if (!o) { o = [0, 0]; agg.set(kk, o); }
+          o[0] += num(r[c.q]); o[1] += num(r[c.net]);
+        },
+        fin() {
+          const f = []; for (const [k, v] of agg) { const [m, cli, a] = k.split('|'); f.push([+m, +cli, +a, Math.round(v[0] * 1e4) / 1e4, Math.round(v[1])]); }
+          return { tipo: 'venta', desde: min, hasta: max, filas, art, f };
+        }
+      };
+    },
+    wapi() {
+      // Facturación "fila real" (igual que la columna calculada del Power BI):
+      // Total / cantidad de filas con el mismo Comprobante + Fecha + Artículo CMQ, + Cantidad Sin Cargo × Precio Neto SF
+      let c; const agg = new Map(), grp = new Map(); let max = 0, min = 99999999, filas = 0;
+      return {
+        onHeader(h) { c = { f: ix(h, 'Fecha'), cli: ix(h, 'Cod. Cliente'), un: ix(h, 'Marca'), tot: ix(h, 'Total'), d: ix(h, 'Descuento $ sobre PN SF'), comp: ix(h, 'Comprobante'), art: ix(h, 'Artículo CMQ', 'Articulo CMQ'), sc: ix(h, 'Cantidad Sin Cargo'), pn: ix(h, 'Precio Neto SF') }; },
+        onRow(r) {
+          const d = RD.fecha(r[c.f]); const cli = cod(r[c.cli]); if (!d || !cli) return;
+          filas++; const k = ymd(d); if (k > max) max = k; if (k < min) min = k;
+          const kk = ym(d) + '|' + cli + '|' + String(r[c.un] ?? '');
+          let o = agg.get(kk); if (!o) { o = [0, 0]; agg.set(kk, o); }
+          o[0] += num(r[c.d]);
+          o[1] += num(r[c.sc]) * num(r[c.pn]);
+          const g = String(r[c.comp] ?? '') + '|' + k + '|' + String(r[c.art] ?? '');
+          let x = grp.get(g); if (!x) { x = [0, 0, kk]; grp.set(g, x); }
+          x[0]++; x[1] += num(r[c.tot]);
+        },
+        fin() {
+          for (const [, x] of grp) { const o = agg.get(x[2]); if (o) o[1] += x[1] / x[0]; }
+          const f = []; for (const [k, v] of agg) { const [m, cli, un] = k.split('|'); f.push([+m, +cli, un, Math.round(v[0]), Math.round(v[1])]); }
+          return { tipo: 'wapi', v: 2, desde: min, hasta: max, filas, f };
+        }
+      };
+    },
+    clientes() {
+      let c; const L = [];
+      return {
+        onHeader(h) { c = { cli: ix(h, 'Cliente'), rs: ix(h, 'Razon social'), fan: ix(h, 'Nombre de fantasia'), sub: ix(h, 'Descripcion subcanal'), loc: ix(h, 'Descripcion localidad'), ven: ix(h, 'Fuerza de venta 1 Personal comercial'), venN: ix(h, 'Fuerza de venta 1 Descripcion personal comercial'), ruta: ix(h, 'Fuerza de venta 1 Ruta de venta'), anu: ix(h, 'Anulado'), alta: ix(h, 'Alta fecha'), lista: ix(h, 'Descripcion lista de precios'), pago: ix(h, 'Descripcion forma de pago'), plazo: ix(h, 'Plazo de pago'), lim: ix(h, 'Limite Cr importe'), cm: ix(h, 'Programa COMPORTAMIENTO MAYORISTA'), pot: ix(h, 'Potencial'), dom: ix(h, 'Domicilio') }; },
+        onRow(r) {
+          const cli = cod(r[c.cli]); if (!cli) return;
+          L.push([cli, String(r[c.rs] ?? '').trim(), String(r[c.sub] ?? '').trim(), +r[c.ven] || 0, String(r[c.venN] ?? '').trim(), +r[c.ruta] || 0, N(r[c.anu]) === 'SI' ? 1 : 0,
+            ymd(RD.fecha(r[c.alta])), String(r[c.lista] ?? ''), String(r[c.pago] ?? ''), num(r[c.plazo]), num(r[c.lim]), N(r[c.cm]) === 'SI' ? 1 : 0, String(r[c.loc] ?? ''), String(r[c.dom] ?? '')]);
+        },
+        fin() { return { tipo: 'clientes', filas: L.length, L }; }
+      };
+    },
+    activos() {
+      let c; const agg = {}; let filas = 0, max = 0;
+      return {
+        onHeader(h) { c = { cli: ix(h, 'Cliente'), un: ix(h, 'Unidad de Negocio'), est: ix(h, 'Estado'), rep: ix(h, 'Repaga?'), art: ix(h, 'Descripcion Articulo'), f: ix(h, 'Fecha colocación', 'Fecha colocacion'), vp: ix(h, 'Venta Prom.'), lr: ix(h, 'Litros Repago') }; },
+        onRow(r) {
+          const cli = cod(r[c.cli]); if (!cli) return; if (c.est >= 0 && N(r[c.est]) !== 'INSTALADO') return;
+          filas++; const k = ymd(RD.fecha(r[c.f])); if (k > max) max = k;
+          const un = N(r[c.un]) === 'UNG' ? 'UNG' : 'CZA';
+          const o = agg[cli] || (agg[cli] = { CZA: 0, UNG: 0, si: 0, no: 0, det: [] });
+          o[un]++; N(r[c.rep]) === 'SI' ? o.si++ : o.no++;
+          if (o.det.length < 40) o.det.push([String(r[c.art] ?? ''), un, N(r[c.rep]) === 'SI' ? 1 : 0, k]);
+        },
+        fin() { return { tipo: 'activos', filas, hasta: max, agg }; }
+      };
+    },
+    estandar() {
+      let c; const L = []; let max = 0, filas = 0;
+      return {
+        onHeader(h) { c = { id: ix(h, 'PDV ID'), tipo: ix(h, 'Tipo'), s: ix(h, 'Score Total'), f: ix(h, 'Fecha'), p: ix(h, 'Score Precio'), d: ix(h, 'Score Disponibilidad'), fr: ix(h, 'Score Frío', 'Score Frio') }; },
+        onRow(r) {
+          if (!N(r[c.tipo]).startsWith('ESTANDAR DE EJECUCION')) return;
+          const cli = cod(r[c.id]); const d = RD.fecha(r[c.f]); if (!cli || !d) return;
+          filas++; const k = ymd(d); if (k > max) max = k;
+          L.push([cli, k, num(r[c.s]), num(r[c.p]), num(r[c.d]), num(r[c.fr])]);
+        },
+        fin() { return { tipo: 'estandar', filas, hasta: max, L }; }
+      };
+    },
+  };
+  async function procesar(blob, nombre, tipo) {
+    const p = PROC[tipo](); await RD.leerArchivo(blob, nombre, h => p.onHeader(h), r => p.onRow(r)); return p.fin();
+  }
+  return { TIPOS, detectar, procesar, N, cod };
+})();
+if (typeof module !== 'undefined') module.exports = AG;
+
+</script>
+<script>
+"use strict";
+// =====================================================================
+//  Top Volumen · Canal Mayorista · Comportamiento Mayorista
+//  Logística Total SRL — Manual Galaxia 2026 (2.4.1.3 y 2.4.1.6)
+// =====================================================================
+const FB_CONF = {
+  apiKey: "AIzaSyAc-nbBxCaqwVyQ2iFfOnVQrFgR03c5RGY",
+  authDomain: "top-volumen---mayoristas.firebaseapp.com",
+  databaseURL: "https://top-volumen---mayoristas-default-rtdb.firebaseio.com",
+  projectId: "top-volumen---mayoristas",
+  storageBucket: "top-volumen---mayoristas.firebasestorage.app",
+  messagingSenderId: "942541022388",
+  appId: "1:942541022388:web:346b8b52963899167c23e1"
+};
+// proyecto del análisis del Censo Thomas (solo lectura, para el SOM)
+const FB_CENSO = {
+  apiKey: "AIzaSyCYq7eaqQcRcOT1-hWMo9d5rsA-hRJGG30",
+  authDomain: "censo-thomas-lt.firebaseapp.com",
+  databaseURL: "https://censo-thomas-lt-default-rtdb.firebaseio.com",
+  projectId: "censo-thomas-lt",
+  storageBucket: "censo-thomas-lt.firebasestorage.app",
+  messagingSenderId: "790674955172",
+  appId: "1:790674955172:web:963217e7b972e0d426ff31"
+};
+const ROOT = 'galaxia';
+const AGG_VER = '2'; // subir cuando cambia cómo se resume un archivo (invalida el caché)
+const FB_VER = '10.12.2';
+
+// ---------- utilidades ----------
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const nf0 = new Intl.NumberFormat('es-AR', { maximumFractionDigits: 0 });
+const nf1 = new Intl.NumberFormat('es-AR', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+const nf2 = new Intl.NumberFormat('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const fH = v => v == null || isNaN(v) || Math.abs(v) < 0.005 ? '' : nf2.format(v);
+const fN = v => v == null || isNaN(v) ? '–' : nf0.format(v);
+const fP = v => v == null || isNaN(v) || !isFinite(v) ? '–' : nf1.format(v * 100) + ' %';
+const fVar = (a, b) => { if (!b) return a > 0 ? '<span class="up">nuevo</span>' : ''; const r = a / b - 1; return `<span class="${r >= 0 ? 'up' : 'down'}">${r >= 0 ? '+' : ''}${nf1.format(r * 100)} %</span>`; };
+const div = (a, b) => b ? a / b : null;
+const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+const MC = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+const ymAdd = (ym, k) => { let y = Math.floor(ym / 100), m = ym % 100 - 1 + k; y += Math.floor(m / 12); m = ((m % 12) + 12) % 12; return y * 100 + m + 1; };
+const ymLab = ym => MC[ym % 100 - 1] + '-' + String(Math.floor(ym / 100)).slice(2);
+const ymdLab = n => n ? `${String(n % 100).padStart(2, '0')}/${String(Math.floor(n / 100) % 100).padStart(2, '0')}/${Math.floor(n / 10000)}` : '–';
+const ymdDate = n => new Date(Math.floor(n / 10000), Math.floor(n / 100) % 100 - 1, n % 100);
+const hoyYmd = () => { const d = new Date(); return d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate(); };
+function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) { } }
+async function sha(t) { const b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(t)); return [...new Uint8Array(b)].map(x => x.toString(16).padStart(2, '0')).join('').slice(0, 16); }
+
+// ---------- IndexedDB (cache local) ----------
+const IDB = (() => {
+  let dbp = null;
+  function db() { if (!dbp) dbp = new Promise((res, rej) => { const r = indexedDB.open('galaxia-top-may', 1); r.onupgradeneeded = () => { r.result.createObjectStore('kv'); }; r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); }); return dbp; }
+  async function get(k) { try { const d = await db(); return await new Promise((res, rej) => { const q = d.transaction('kv').objectStore('kv').get(k); q.onsuccess = () => res(q.result); q.onerror = () => rej(q.error); }); } catch (e) { return undefined; } }
+  async function set(k, v) { try { const d = await db(); await new Promise((res, rej) => { const t = d.transaction('kv', 'readwrite'); t.objectStore('kv').put(v, k); t.oncomplete = res; t.onerror = () => rej(t.error); }); } catch (e) { } }
+  return { get, set };
+})();
+
+// ---------- compresión ----------
+async function gz(str) { const s = new Blob([str]).stream().pipeThrough(new CompressionStream('gzip')); return new Uint8Array(await new Response(s).arrayBuffer()); }
+async function gunz(u8) { const s = new Blob([u8]).stream().pipeThrough(new DecompressionStream('gzip')); return await new Response(s).text(); }
+function b64(u8) { let s = ''; for (let i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000)); return btoa(s); }
+function unb64(t) { const s = atob(t), u = new Uint8Array(s.length); for (let i = 0; i < s.length; i++) u[i] = s.charCodeAt(i); return u; }
+function partir(t) { const o = {}; for (let i = 0, n = 0; i < t.length; i += 400000, n++) o['c' + String(n).padStart(3, '0')] = t.slice(i, i + 400000); return o; }
+const juntar = o => Object.keys(o || {}).sort().map(k => o[k]).join('');
+
+// ---------- Firebase ----------
+let DB = null, DBC = null;
+function cargarJs(u) { return new Promise((res, rej) => { const s = document.createElement('script'); s.src = u; s.onload = res; s.onerror = () => rej(new Error('No se pudo cargar ' + u)); document.head.appendChild(s); }); }
+async function fbInit() {
+  if (!window.firebase) {
+    await cargarJs(`https://www.gstatic.com/firebasejs/${FB_VER}/firebase-app-compat.js`);
+    await cargarJs(`https://www.gstatic.com/firebasejs/${FB_VER}/firebase-database-compat.js`);
+  }
+  if (!firebase.apps.length) { firebase.initializeApp(FB_CONF); firebase.initializeApp(FB_CENSO, 'censo'); }
+  DB = firebase.database(); DBC = firebase.app('censo').database();
+}
+const ref = p => DB.ref(ROOT + (p ? '/' + p : ''));
+async function fbGet(p, censo) { const s = await (censo ? DBC.ref(p) : ref(p)).once('value'); return s.val(); }
+
+// =====================================================================
+//  Estado y configuración
+// =====================================================================
+const ADMIN = /admin/i.test(location.hash);
+let USER = lsGet('gx_user') || '';
+const SUPS = ['CORSINO PEDRO', 'MORENO FERNANDO', 'ANTUAL PAULA', 'SECO ROBERTO ENRIQUE'];
+const VEN_DEF = { 'CORSINO PEDRO': [11, 13, 7, 1, 9, 10, 12, 21, 26, 97], 'MORENO FERNANDO': [14, 16, 17, 8, 3, 18, 15, 25, 99, 100], 'ANTUAL PAULA': [4, 5, 2, 95, 24], 'SECO ROBERTO ENRIQUE': [20, 19, 6, 96, 98] };
+const CANALES = ['K+T', 'AS', 'REF', 'MAY'];
+// mismas reglas que el Power Query del Censo Thomas (subcanal → canal), en orden
+const CANAL_REGLAS = [['sw', 'VARIOS SAUCO', 'OTROS'], ['sw', 'SUPERMERCADOS', 'OTROS'], ['sw', 'RESTAURANTE', 'REF'], ['sw', 'RESTAURANT PREMI', 'REF'], ['sw', 'PUB CHUPODROMO', 'REF'], ['sw', 'PIZZER', 'REF'], ['sw', 'OTROS REFRIGERAD', 'REF'], ['sw', 'MAYORISTA', 'MAY'], ['sw', 'KA', 'REF'], ['sw', 'HOTEL', 'REF'], ['sw', 'HAMBURGUES', 'REF'], ['ct', 'GIMNASIOS', 'REF'], ['ct', 'FLETEROS', 'OTROS'], ['ct', 'EVENTOS', 'REF'], ['ct', 'ENTRETENIMIENTO', 'REF'], ['ct', 'EMPRESA', 'REF'], ['ct', 'EDUCAC', 'REF'], ['ct', 'DISCO', 'REF'], ['sw', 'COMIDAS', 'REF'], ['sw', 'COM P/LLEVAR', 'REF'], ['ct', 'CASINO', 'REF'], ['sw', 'CANCHAS', 'REF'], ['ct', 'CAFE', 'REF'], ['ct', 'BOLICHE', 'REF'], ['ct', 'BODEGON', 'REF'], ['sw', 'BAR', 'REF'], ['sw', 'AUTOSERVICIO IND', 'AS'], ['sw', 'ALMACEN', 'K+T'], ['ct', 'REF', 'REF'], ['ct', 'MUSICA', 'REF'], ['ct', 'CATERING', 'REF'], ['ct', 'REG', 'REF'], ['sw', 'BASE', 'REF'], ['sw', 'CADENA', 'REF'], ['sw', 'TOP', 'REF'], ['ct', 'KIOSCO', 'K+T'], ['ct', 'FIAMBR', 'K+T'], ['ct', 'VERDULERIA', 'K+T'], ['ct', 'CARNIC', 'K+T'], ['ct', 'ROTISERIA', 'K+T'], ['ct', 'BEBIDA', 'K+T'], ['ct', 'PASTAS', 'K+T'], ['ct', 'DIETETICA', 'K+T'], ['ct', 'VINOTECA', 'K+T'], ['ct', 'K+T', 'K+T'], ['ct', 'EST', 'REF'], ['ct', 'PESCADERIA', 'K+T'], ['ct', 'PANADERIA', 'K+T'], ['ct', 'COMIDA AL PASO', 'K+T'], ['ct', 'HIPERMERCADOS', 'OTROS'], ['ct', 'TIENDA VIRTUAL', 'K+T']];
+function canalRegla(sub) { const s = AG.N(sub); for (const [t, k, o] of CANAL_REGLAS) if (t === 'sw' ? s.startsWith(k) : s.includes(k)) return o; return 'REVISAR'; }
+const MARCA_GRUPOS = [['ANDES ORIGEN', 'ANDES ORIGEN'], ['ANDES', 'ANDES'], ['BRAHMA', 'BRAHMA'], ['BUDWEISER', 'BUDWEISER'], ['CORONA', 'CORONA'], ['GOOSE', 'GOOSE ISLAND'], ['MICHELOB', 'MICHELOB ULTRA'], ['PATAGONIA', 'PATAGONIA'], ['STELLA', 'STELLA ARTOIS'], ['QUILMES 1890', 'QUILMES VALUE'], ['QUILMES BAJO CERO', 'QUILMES VALUE'], ['QUILMES', 'QUILMES'], ['STOUT QUILMES', 'QUILMES']];
+const grupoDef = m => { const s = AG.N(m); for (const [k, g] of MARCA_GRUPOS) if (s.startsWith(k)) return g; return s || 'SIN MARCA'; };
+const ABOVE_DEF = /^(ANDES ORIGEN|STELLA|CORONA|PATAGONIA|MICHELOB|GOOSE|BUDWEISER)/;
+const M1M2_DEF = /^(1000 CC VIDRIO|975 CC VIDRIO|473)/;
+const LOGO_DEF = 'data:image/png;base64,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';
+const CFG_DEF = { topeMay: 450, alerta: 0.8, topN: 5, factorCM: 6, mixMay: 0.25, scoreBajo: 70, somBajo: 0.7, tsTol: 0, mesesStock: 0, sub: {}, ven: {}, grupo: {}, above: {}, m1m2: {}, logo: '' };
+let CFG = JSON.parse(JSON.stringify(CFG_DEF));
+let PDA = {}, TOPES = {}, AUT = {}, META = null;
+// Tope efectivo: el propio del cliente (excepción) o, si es mayorista, el tope general del canal
+const TOPE_EXC_DEF = { 332898: 150, 911416: 150 }; // Guerrero: excepción inicial, se cambia desde el tope del cliente
+function topeInfo(cod) {
+  if (TOPES[cod] && TOPES[cod].tope != null) return { t: TOPES[cod].tope, src: 'propio' };
+  if (TOPE_EXC_DEF[cod] != null && !(TOPES[cod] && TOPES[cod].quitado)) return { t: TOPE_EXC_DEF[cod], src: 'propio' };
+  const c = CLI.get(cod); if (c && c.canal === 'MAY' && CFG.topeMay) return { t: CFG.topeMay, src: 'general' };
+  return { t: null, src: '' };
+}
+const topeDe = cod => topeInfo(cod).t;
+const topeTxt = cod => { const i = topeInfo(cod); return i.t == null ? 'definir' : nf1.format(i.t) + (i.src === 'general' ? ' <span class="small mut">(general)</span>' : ''); };
+let DATA = null, CENSO = null;
+
+// filtros / navegación
+const S = { tab: 'info', ym: 0, neg: 'CZA', marca: '', cal: '', sup: '', ven: '', peso: 'canal', canalCM: '', soloCM: true, q: '', cli: 0, anioMay: 0 };
+
+// =====================================================================
+//  Preparación de datos
+// =====================================================================
+let CLI = new Map(), ART = new Map(), MESES_DATA = [], V = null, WI = new Map(), EST = new Map(), EDF = {};
+const unCorto = u => { const s = AG.N(u); return s.startsWith('CERVEZA') ? 'CZA' : s === 'UNG' ? 'UNG' : s.startsWith('AGUA') ? 'AGUAS' : 'OTROS'; };
+function supDe(ven) {
+  if (CFG.ven && CFG.ven[ven]) return CFG.ven[ven];
+  for (const s in VEN_DEF) if (VEN_DEF[s].includes(+ven)) return s;
+  return 'SIN SUPERVISOR';
+}
+const canalDe = sub => (CFG.sub && CFG.sub[sub]) || canalRegla(sub);
+const grupoDe = m => (CFG.grupo && CFG.grupo[m]) || grupoDef(m);
+const esAbove = m => CFG.above && m in CFG.above ? !!CFG.above[m] : ABOVE_DEF.test(AG.N(m));
+const esM1M2 = c => CFG.m1m2 && c in CFG.m1m2 ? !!CFG.m1m2[c] : M1M2_DEF.test(AG.N(c));
+
+function preparar() {
+  const D = DATA;
+  ART = new Map(); for (const k in D.art) { const [n, m, c, u] = D.art[k]; ART.set(+k, { n, m, c, u: unCorto(u), g: grupoDe(m) }); }
+  CLI = new Map();
+  for (const r of D.cli || []) {
+    const [cod, rs, sub, ven, venN, ruta, anu, alta, lista, pago, plazo, lim, cmChess, loc, dom] = r;
+    CLI.set(cod, { cod, rs, sub, ven, venN, ruta, anu, alta, lista, pago, plazo, lim, cmChess, loc, dom, canal: canalDe(sub), sup: supDe(ven) });
+  }
+  const n = D.v.length;
+  V = { ym: new Int32Array(n), cli: new Int32Array(n), art: new Int32Array(n), hl: new Float64Array(n) };
+  const ms = new Set();
+  D.v.forEach((r, i) => { V.ym[i] = r[0]; V.cli[i] = r[1]; V.art[i] = r[2]; V.hl[i] = r[3]; ms.add(r[0]); if (!CLI.has(r[1])) CLI.set(r[1], { cod: r[1], rs: '(sin maestro) ' + r[1], sub: '', ven: 0, venN: '', canal: 'SIN MAESTRO', sup: 'SIN SUPERVISOR' }); });
+  MESES_DATA = [...ms].sort((a, b) => a - b);
+  WI = new Map();
+  for (const [ym, cli, un, d, f] of D.w || []) {
+    let m = WI.get(cli); if (!m) WI.set(cli, m = new Map());
+    let o = m.get(ym); if (!o) m.set(ym, o = {});
+    const u = unCorto(un); const x = o[u] || (o[u] = [0, 0]); x[0] += d; x[1] += f;
+  }
+  EST = new Map();
+  for (const r of D.est || []) { let a = EST.get(r[0]); if (!a) EST.set(r[0], a = []); a.push(r); }
+  for (const a of EST.values()) a.sort((x, y) => x[1] - y[1]);
+  EDF = D.edf || {};
+  if (!S.ym || !MESES_DATA.includes(S.ym)) S.ym = MESES_DATA[MESES_DATA.length - 1] || 0;
+  if (!S.anioMay) S.anioMay = Math.floor(S.ym / 100);
+  aplicarFiltros();
+}
+
+// FX: cli -> Map(ym -> [hl, bd]) con los filtros de negocio / marca / calibre
+let FX = new Map(), TOT = new Map();
+function negOk(u) { return S.neg === 'TODOS' ? true : S.neg === 'CZA+UNG' ? (u === 'CZA' || u === 'UNG') : u === S.neg; }
+function artOk(a) { const A = ART.get(a); if (!A) return false; if (!negOk(A.u)) return false; if (S.marca && A.g !== S.marca) return false; if (S.cal && A.c !== S.cal) return false; return true; }
+function aplicarFiltros() {
+  FX = new Map(); TOT = new Map();
+  const ok = new Map();
+  for (let i = 0; i < V.hl.length; i++) {
+    const a = V.art[i]; let k = ok.get(a); if (k === undefined) { k = artOk(a); ok.set(a, k); }
+    if (!k) continue;
+    const c = V.cli[i], ym = V.ym[i], h = V.hl[i];
+    let m = FX.get(c); if (!m) FX.set(c, m = new Map());
+    let o = m.get(ym); if (!o) m.set(ym, o = [0, 0]);
+    o[0] += h; if (h > 0) o[1]++;
+    TOT.set(ym, (TOT.get(ym) || 0) + h);
+  }
+}
+const hlM = (cli, ym) => { const m = FX.get(cli); const o = m && m.get(ym); return o ? o[0] : 0; };
+const bdM = (cli, ym) => { const m = FX.get(cli); const o = m && m.get(ym); return o ? o[1] : 0; };
+const hlS = (cli, yms) => yms.reduce((s, ym) => s + hlM(cli, ym), 0);
+const rango = (a, b) => { const o = []; for (let x = a; x <= b; x = ymAdd(x, 1)) o.push(x); return o; };
+const P_ = () => { const ym = S.ym, y = Math.floor(ym / 100); return { am: [ym], lm: [ymAdd(ym, -1)], ly: [ym - 100], ytd: rango(y * 100 + 1, ym), ytdly: rango((y - 1) * 100 + 1, ym - 100), u3m: rango(ymAdd(ym, -2), ym), u3mly: rango(ymAdd(ym, -102), ym - 100) }; };
+const tieneMes = ym => MESES_DATA.includes(ym);
+const tieneTodos = yms => yms.every(tieneMes);
+function wUn() { return S.neg === 'CZA' ? ['CZA'] : S.neg === 'UNG' ? ['UNG'] : ['CZA', 'UNG']; }
+function tsCli(cli, yms) {
+  const m = WI.get(cli); if (!m) return null; let d = 0, f = 0;
+  for (const ym of yms) { const o = m.get(ym); if (!o) continue; for (const u of wUn()) if (o[u]) { d += o[u][0]; f += o[u][1]; } }
+  return f ? d / f : null;
+}
+function tsGrupo(clis, yms) { let d = 0, f = 0; for (const c of clis) { const m = WI.get(c); if (!m) continue; for (const ym of yms) { const o = m.get(ym); if (!o) continue; for (const u of wUn()) if (o[u]) { d += o[u][0]; f += o[u][1]; } } } return f ? d / f : null; }
+function wapiMeses() { const s = new Set(); for (const m of WI.values()) for (const k of m.keys()) s.add(k); return [...s].sort((a, b) => a - b); }
+function scoreCli(cli, hasta) { const a = EST.get(cli); if (!a) return null; const lim = hasta || 99999999; let r = null; for (const x of a) if (x[1] <= lim) r = x; return r; }
+function edfCli(cli) {
+  const o = EDF[cli]; if (!o) return null;
+  const n = S.neg === 'CZA' ? o.CZA : S.neg === 'UNG' ? o.UNG : o.CZA + o.UNG;
+  const rep = o.si && o.no ? 'MIXTO' : o.si ? 'SI' : 'NO';
+  return { n, tot: o.CZA + o.UNG, rep, o };
+}
+function somCli(cli) { return CENSO && CENSO.som.get(cli) || null; }
+function clisVisibles(filtrarSup = true) { const out = []; for (const c of CLI.values()) { if (filtrarSup && S.sup && c.sup !== S.sup) continue; if (filtrarSup && S.ven && c.ven !== +S.ven) continue; out.push(c); } return out; }
+
+// =====================================================================
+//  Censo Thomas (SOM por cliente) — se lee del Firebase del análisis del censo
+// =====================================================================
+const MESN = { ENE: 1, FEB: 2, MAR: 3, ABR: 4, MAY: 5, JUN: 6, JUL: 7, AGO: 8, SEP: 9, SET: 9, OCT: 10, NOV: 11, DIC: 12 };
+const cidOrden = c => { const m = String(c).toUpperCase().match(/([A-Z]{3})\D*(\d{2,4})/); return m ? (+m[2] % 100) * 100 + (MESN[m[1]] || 0) : 0; };
+async function cargarCenso() {
+  try {
+    const raw = await fbGet('censo/base', true); if (!raw) return null;
+    const D = JSON.parse(typeof raw === 'string' ? raw : juntar(raw));
+    let maps = D.maps;
+    try { const cfg = await fbGet('censo/cfg', true); const c = cfg && (typeof cfg === 'string' ? JSON.parse(cfg) : cfg); if (c && c.maps && c.maps.length === maps.length) maps = c.maps; } catch (e) { }
+    const cids = Object.keys(D.facts || {}).sort((a, b) => cidOrden(a) - cidOrden(b));
+    const cid = cids[cids.length - 1]; if (!cid) return null;
+    const tot = new Map(), cmq = new Map();
+    for (const f of D.facts[cid]) {
+      const m = maps[f[1]]; if (!m || m.incluir === false) continue;
+      const p = D.pdv[f[0]]; const id = AG.cod(p.id ?? p.cod ?? p.cliente ?? p.c0); if (!id) continue;
+      tot.set(id, (tot.get(id) || 0) + f[2]); if (m.empresa === 'CMQ') cmq.set(id, (cmq.get(id) || 0) + f[2]);
+    }
+    const som = new Map(); for (const [id, t] of tot) if (t > 0) som.set(id, { som: (cmq.get(id) || 0) / t, hl: t, cid });
+    return { cid, som, n: som.size };
+  } catch (e) { console.warn('censo', e); return { error: String(e.message || e), som: new Map(), cid: '' }; }
+}
+
+// =====================================================================
+//  Cálculos: Top por canal, potencial, diagnóstico y PDA sugerido
+// =====================================================================
+function filaCliente(c, P) {
+  const r = { c, cod: c.cod };
+  r.ly = hlS(c.cod, P.ly); r.ytd = hlS(c.cod, P.ytd); r.ytdly = hlS(c.cod, P.ytdly); r.u3m = hlS(c.cod, P.u3m); r.u3mly = hlS(c.cod, P.u3mly); r.am = hlS(c.cod, P.am); r.lm = hlS(c.cod, P.lm);
+  r.bdLy = bdM(c.cod, P.ly[0]); r.bdLm = bdM(c.cod, P.lm[0]); r.bdAm = bdM(c.cod, P.am[0]);
+  r.tsAm = tsCli(c.cod, P.am); r.tsU3 = tsCli(c.cod, P.u3m); r.tsYtd = tsCli(c.cod, P.ytd);
+  r.edf = edfCli(c.cod); r.sc = scoreCli(c.cod, S.ym * 100 + 31); r.som = somCli(c.cod);
+  return r;
+}
+// índice de potencial 0..1: momentum de volumen (40%), tendencia de surtido (30%), espacio de share (30%) — percentiles dentro del canal
+function potencial(rows, universo) {
+  const comp = r => {
+    const mom = r.u3mly > 0 ? r.u3m / r.u3mly - 1 : (r.ytdly > 0 ? r.ytd / r.ytdly - 1 : null);
+    const bd = r.bdLy > 0 ? r.bdAm / r.bdLy - 1 : (r.bdLm > 0 ? r.bdAm / r.bdLm - 1 : null);
+    const sh = r.som ? 1 - Math.min(1, r.som.som) : null;
+    return [mom, bd, sh];
+  };
+  const U = universo.map(comp);
+  const pct = (v, j) => { if (v == null) return null; const xs = U.map(x => x[j]).filter(x => x != null); if (!xs.length) return null; let lo = 0; for (const x of xs) if (x < v) lo++; return lo / Math.max(1, xs.length - 1); };
+  const W = [0.4, 0.3, 0.3];
+  for (const r of rows) {
+    const c = comp(r); let s = 0, w = 0; r.potC = c;
+    c.forEach((v, j) => { const p = pct(v, j); if (p != null) { s += Math.min(1, p) * W[j]; w += W[j]; } });
+    r.pot = w ? s / w : null;
+  }
+}
+function diagnostico(r, tsCanal) {
+  const tsAlto = r.tsU3 != null && tsCanal != null ? r.tsU3 > tsCanal * (1 + (CFG.tsTol || 0)) : null;
+  const potAlto = r.pot != null ? r.pot >= 0.5 : null;
+  let q = 0;
+  if (tsAlto != null && potAlto != null) q = tsAlto ? (potAlto ? 2 : 1) : (potAlto ? 3 : 4);
+  else if (potAlto != null) q = potAlto ? 3 : 4;
+  r.q = q; r.tsAlto = tsAlto; r.potAlto = potAlto; r.tsCanal = tsCanal;
+  return q;
+}
+const QLAB = { 0: 'Sin datos', 1: 'TS alto · Potencial bajo', 2: 'TS alto · Potencial alto', 3: 'TS bajo · Potencial alto', 4: 'TS bajo · Potencial bajo' };
+const QCORTO = { 0: '–', 1: 'Sobreinvertido', 2: 'Invertir con tope', 3: 'Capturar volumen', 4: 'Sostener' };
+function topeSugerido(r) { const P = P_(); const meses = P.u3m.filter(tieneMes).length || 1; return Math.round(r.u3m / meses * 10) / 10; }
+function pdaSugerido(r, esCM) {
+  const L = [];
+  const ts = fP(r.tsU3), tsc = fP(r.tsCanal), tope = topeSugerido(r);
+  const mom = r.potC && r.potC[0] != null ? (r.potC[0] >= 0 ? '+' : '') + nf1.format(r.potC[0] * 100) + ' %' : 's/d';
+  switch (r.q) {
+    case 1: L.push(`Concentra inversión sin crecimiento: TS U3M ${ts} vs ${tsc} del canal, volumen U3M ${mom} vs año anterior. Bajar el descuento hacia las condiciones del canal, fijar tope de ${nf1.format(tope)} HL/mes y redireccionar el TS liberado a clientes con potencial.`); break;
+    case 2: L.push(`La inversión está traccionando volumen (U3M ${mom} vs año anterior) con TS ${ts} vs ${tsc} del canal. Mantener condiciones con tope de ${nf1.format(tope)} HL/mes y revisar el retorno todos los meses; condicionar el descuento a sostener el surtido (${r.bdAm} artículos).`); break;
+    case 3: L.push(`Crece con poca inversión (TS ${ts} vs ${tsc} del canal, U3M ${mom}). Capturar volumen: ampliar surtido (hoy ${r.bdAm} artículos, ${r.bdLy} el año pasado), evaluar acción focalizada o equipo de frío adicional.`); break;
+    case 4: L.push(`Cliente estable y sin sobreinversión (TS ${ts} vs ${tsc}). Sostener ejecución y seguimiento mensual, sin inversión adicional.`); break;
+    default: L.push('Faltan datos de TS o de volumen del año anterior para diagnosticar; completar el plan a mano.');
+  }
+  if (r.sc && r.sc[2] < CFG.scoreBajo) L.push(`Estándar de ejecución bajo (${nf1.format(r.sc[2])} %): trabajar precio, disponibilidad y frío en la próxima visita.`);
+  if (r.edf && r.edf.rep !== 'SI' && r.edf.tot) L.push(`EDF: ${r.edf.tot} equipos, repaga ${r.edf.rep}. Revisar repago antes de sumar inversión.`);
+  if (r.som && r.som.som < CFG.somBajo) L.push(`SOM ${fP(r.som.som)} (censo ${r.som.cid}): plan de share con marcas foco.`);
+  if (esCM) L.push(`Cliente con comportamiento mayorista: alineado a la estrategia regional de cupos, sin acciones DC adicionales. Tope ${nf1.format(topeDe(r.cod) || tope)} HL/mes; si se supera, pedir autorización al gerente de CMQ.`);
+  return L.join('\n');
+}
+function calcTop() {
+  const P = P_(); const res = []; const totNeg = { ly: 0, ytd: 0, u3m: 0, am: 0 };
+  const porCanal = new Map(); for (const c of CLI.values()) { if (!CANALES.includes(c.canal)) continue; let a = porCanal.get(c.canal); if (!a) porCanal.set(c.canal, a = []); a.push(c); }
+  for (const c of CLI.values()) { totNeg.ly += hlS(c.cod, P.ly); totNeg.ytd += hlS(c.cod, P.ytd); totNeg.u3m += hlS(c.cod, P.u3m); totNeg.am += hlS(c.cod, P.am); }
+  for (const canal of CANALES) {
+    const cl = porCanal.get(canal) || [];
+    const all = cl.map(c => ({ c, ytd: hlS(c.cod, P.ytd) })).filter(x => x.ytd > 0).sort((a, b) => b.ytd - a.ytd);
+    const tot = { ly: 0, ytd: 0, u3m: 0, am: 0 }; for (const c of cl) { tot.ly += hlS(c.cod, P.ly); tot.ytd += hlS(c.cod, P.ytd); tot.u3m += hlS(c.cod, P.u3m); tot.am += hlS(c.cod, P.am); }
+    const rows = all.slice(0, CFG.topN).map(x => filaCliente(x.c, P));
+    const uni = all.slice(0, 60).map(x => filaCliente(x.c, P));
+    potencial(rows, uni);
+    const tsC = tsGrupo(cl.map(c => c.cod), P.u3m);
+    rows.forEach(r => diagnostico(r, tsC));
+    const topSum = { ly: 0, ytd: 0, u3m: 0, am: 0 }; rows.forEach(r => { for (const k in topSum) topSum[k] += r[k]; });
+    const tsCam = tsGrupo(cl.map(c => c.cod), P.am);
+    res.push({ canal, rows, tot, topSum, tsC, tsCam, tsTop: tsGrupo(rows.map(r => r.cod), P.u3m) });
+  }
+  return { res, totNeg, P };
+}
+// Comportamiento mayorista: YTD > promedio del subcanal × factor (+ señales del manual)
+function calcCM() {
+  const P = P_(); const ytdM = P.ytd;
+  const porSub = new Map();
+  for (const c of CLI.values()) {
+    if (c.canal === 'MAY' || c.canal === 'OTROS' || c.canal === 'SIN MAESTRO') continue;
+    const y = hlS(c.cod, ytdM); if (y <= 0) continue;
+    let a = porSub.get(c.sub); if (!a) porSub.set(c.sub, a = []); a.push({ c, ytd: y });
+  }
+  // mixes por cliente en el YTD (siempre sobre todo el portafolio, sin filtros)
+  const mix = new Map(); const ytdSet = new Set(ytdM);
+  for (let i = 0; i < V.hl.length; i++) {
+    if (!ytdSet.has(V.ym[i])) continue; const A = ART.get(V.art[i]); if (!A) continue;
+    let o = mix.get(V.cli[i]); if (!o) mix.set(V.cli[i], o = { cza: 0, ung: 0, m12: 0, ab: 0, sku: new Set() });
+    const h = V.hl[i];
+    if (A.u === 'CZA') { o.cza += h; if (esM1M2(A.c)) o.m12 += h; if (esAbove(A.m)) o.ab += h; } else if (A.u === 'UNG') o.ung += h;
+    if (h > 0 && (A.u === 'CZA' || A.u === 'UNG')) o.sku.add(V.art[i]);
+  }
+  const met = cod => { const o = mix.get(cod); const e = EDF[cod]; return { m12: o ? div(o.m12, o.cza) : null, ung: o ? div(o.ung, o.cza + o.ung) : null, ab: o ? div(o.ab, o.cza) : null, sku: o ? o.sku.size : 0, edf: e ? e.CZA + e.UNG : 0, ts: tsCli(cod, P.u3m) }; };
+  const out = [];
+  for (const [sub, arr] of porSub) {
+    const prom = arr.reduce((s, x) => s + x.ytd, 0) / arr.length;
+    const ms = arr.map(x => met(x.c.cod)); const avg = k => { const v = ms.map(m => m[k]).filter(v => v != null); return v.length ? v.reduce((a, b) => a + b, 0) / v.length : null; };
+    const A = { m12: avg('m12'), ung: avg('ung'), ab: avg('ab'), sku: avg('sku'), edf: avg('edf'), ts: avg('ts') };
+    arr.forEach((x, i) => {
+      const ratio = prom ? x.ytd / prom : 0; const m = ms[i];
+      const sen = { vol: ratio > CFG.factorCM, m12: m.m12 != null && A.m12 != null && m.m12 > A.m12 * 1.2, ung: m.ung != null && A.ung != null && m.ung < A.ung * 0.8, ab: m.ab != null && A.ab != null && m.ab < A.ab * 0.8, sku: A.sku != null && m.sku > A.sku * 1.5, edf: A.edf != null && m.edf > Math.max(2, A.edf * 2), ts: m.ts != null && A.ts != null && m.ts > A.ts * 1.2 };
+      const nSen = Object.values(sen).filter(Boolean).length;
+      out.push({ c: x.c, cod: x.c.cod, sub, ytd: x.ytd, prom, ratio, cm: ratio > CFG.factorCM, nSen, sen, m, avg: A, nSub: arr.length });
+    });
+  }
+  return out.sort((a, b) => b.ratio - a.ratio);
+}
+
+// =====================================================================
+//  Render general
+// =====================================================================
+const TABS = [['info', 'Info'], ['top', 'Top Volumen (2.4.1.3)'], ['cm', 'Comportamiento Mayorista (2.4.1.6)'], ['may', 'Canal Mayorista (2.4.1.6)'], ['ficha', 'Ficha cliente'], ['resumen', 'Resumen PDA'], ['ajustes', 'Ajustes'], ['carga', 'Cargar datos']];
+function render() {
+  $('nav').innerHTML = TABS.filter(t => ADMIN || !['ajustes', 'carga'].includes(t[0])).map(([k, l]) => `<button class="${S.tab === k ? 'on' : ''}" onclick="irTab('${k}')">${l}</button>`).join('');
+  renderUsr(); renderFresh(); renderFiltros();
+  const f = { info: vInfo, top: vTop, cm: vCM, may: vMay, ficha: vFicha, resumen: vResumen, ajustes: vAjustes, carga: vCarga }[S.tab];
+  if (!DATA && !['carga', 'info', 'ajustes'].includes(S.tab)) { $('main').innerHTML = `<div class="card"><h2>Sin datos</h2><div class="hint">${ADMIN ? 'Todavía no se publicaron datos. Andá a <b>Cargar datos</b>.' : 'Todavía no se publicaron datos.'}</div></div>`; return; }
+  try { f(); } catch (e) { console.error(e); $('main').innerHTML = `<div class="err">Error al dibujar: ${esc(e.message)} — mandale una captura a Ivo.</div>`; }
+}
+function irTab(k) { S.tab = k; render(); window.scrollTo(0, 0); }
+function renderUsr() {
+  $('usr').innerHTML = `${ADMIN ? '<span class="adm">ADMIN</span>' : ''} Usuario: <b>${esc(USER || '—')}</b> <span class="lk" onclick="pedirUsuario()">cambiar</span>`;
+  $('logo').src = CFG.logo || LOGO_DEF; $('logo').style.display = '';
+}
+function pedirUsuario() {
+  abrirDlg('¿Quién sos?', `<div class="hint">Se usa para dejar registrado quién cargó cada PDA y cada autorización.</div><div class="row">${[...SUPS, 'IVO (ANALISTA)', 'JEFE DE VENTAS'].map(s => `<button onclick="setUser('${s}')">${s}</button>`).join('')}</div><div class="row" style="margin-top:10px"><input id="uOtro" placeholder="Otro nombre"><button onclick="setUser($('uOtro').value)">OK</button></div>`, '');
+}
+function setUser(u) { u = String(u || '').trim().toUpperCase(); if (!u) return; USER = u; lsSet('gx_user', u); cerrarDlg(); render(); }
+function renderFresh() {
+  const h = hoyYmd(), M = META || {};
+  const pill = (lab, ymd, warnD, badD, extra = '') => {
+    if (!ymd) return `<span class="pill bad">${lab}: <b>sin datos</b></span>`;
+    const d = Math.round((ymdDate(h) - ymdDate(ymd)) / 864e5);
+    const cls = d <= warnD ? 'ok' : d <= badD ? 'warn' : 'bad';
+    return `<span class="pill ${cls}" title="Hace ${d} días">${lab} hasta <b>${ymdLab(ymd)}</b>${extra}</span>`;
+  };
+  let h2 = '<span class="mut">Datos:</span>';
+  h2 += pill('Venta', M.venta?.hasta, 2, 6);
+  h2 += pill('WAPI (TS)', M.wapi?.hasta, 35, 65);
+  h2 += pill('Estándar', M.estandar?.hasta, 10, 30);
+  h2 += pill('EDF', M.activos?.mod, 10, 35, ' (archivo)');
+  h2 += pill('Clientes', M.clientes?.mod, 10, 35, ' (archivo)');
+  h2 += CENSO ? (CENSO.error ? `<span class="pill bad">Censo: <b>no se pudo leer</b></span>` : `<span class="pill ok">SOM: censo <b>${esc(CENSO.cid)}</b> (${CENSO.n} PDV)</span>`) : `<span class="pill">SOM: <b>cargando…</b></span>`;
+  if (M.ts) h2 += `<span class="pill">Publicado <b>${new Date(M.ts).toLocaleString('es-AR', { dateStyle: 'short', timeStyle: 'short' })}</b>${M.por ? ' por ' + esc(M.por) : ''}</span>`;
+  $('fresh').innerHTML = h2;
+}
+function opt(v, l, sel) { return `<option value="${esc(v)}" ${String(v) === String(sel) ? 'selected' : ''}>${esc(l)}</option>`; }
+function renderFiltros() {
+  if (!DATA || ['info', 'ajustes', 'carga'].includes(S.tab)) { $('filters').style.display = 'none'; return; }
+  $('filters').style.display = '';
+  const marcas = [...new Set([...ART.values()].filter(a => negOk(a.u)).map(a => a.g))].sort();
+  const cals = [...new Set([...ART.values()].filter(a => negOk(a.u) && (!S.marca || a.g === S.marca)).map(a => a.c))].sort();
+  const vens = [...new Map([...CLI.values()].filter(c => c.ven && (!S.sup || c.sup === S.sup)).map(c => [c.ven, c.venN])).entries()].sort((a, b) => a[1].localeCompare(b[1]));
+  let h = `<label>Mes<select onchange="S.ym=+this.value;render()">${[...MESES_DATA].reverse().map(m => opt(m, MESES[m % 100 - 1] + ' ' + Math.floor(m / 100), S.ym)).join('')}</select></label>`;
+  h += `<label>Negocio<select onchange="S.neg=this.value;S.marca='';S.cal='';aplicarFiltros();render()">${['CZA', 'UNG', 'CZA+UNG', 'TODOS'].map(x => opt(x, x === 'CZA' ? 'CZA (Cervezas CMQ)' : x, S.neg)).join('')}</select></label>`;
+  h += `<label>Marca (agrupada)<select onchange="S.marca=this.value;S.cal='';aplicarFiltros();render()">${opt('', 'Todas', S.marca)}${marcas.map(m => opt(m, m, S.marca)).join('')}</select></label>`;
+  h += `<label>Calibre<select onchange="S.cal=this.value;aplicarFiltros();render()">${opt('', 'Todos', S.cal)}${cals.map(m => opt(m, m, S.cal)).join('')}</select></label>`;
+  if (S.tab !== 'top') {
+    h += `<label>Supervisor<select onchange="S.sup=this.value;S.ven='';render()">${opt('', 'Todos', S.sup)}${SUPS.map(s => opt(s, s, S.sup)).join('')}</select></label>`;
+    h += `<label>Vendedor<select onchange="S.ven=this.value;render()">${opt('', 'Todos', S.ven)}${vens.map(([k, n]) => opt(k, k + ' - ' + n, S.ven)).join('')}</select></label>`;
+  }
+  if (S.tab === 'top') h += `<label>Peso sobre<select onchange="S.peso=this.value;render()">${opt('canal', 'Total del canal', S.peso)}${opt('neg', 'Total del negocio', S.peso)}</select></label>`;
+  $('filters').innerHTML = h;
+}
+function abrirDlg(t, body, foot) { $('dlgT').innerHTML = t; $('dlgB').innerHTML = body; $('dlgF').innerHTML = foot || ''; $('dlgF').style.display = foot ? '' : 'none'; if (!$('dlg').open) $('dlg').showModal(); }
+function cerrarDlg() { $('dlg').close(); }
+
+// ---------- tabla genérica ordenable ----------
+const SORTS = {};
+function tabla(id, cols, rows, opts = {}) {
+  const st = SORTS[id]; let rs = rows.slice();
+  if (st) { const c = cols[st.i]; if (c && c.sv) rs.sort((a, b) => { const x = c.sv(a) ?? -Infinity, y = c.sv(b) ?? -Infinity; return (x < y ? -1 : x > y ? 1 : 0) * st.d; }); }
+  const g = opts.groups ? `<tr>${opts.groups.map(x => `<th class="grp" colspan="${x[1]}">${esc(x[0])}</th>`).join('')}</tr>` : '';
+  const head = `<tr class="${opts.groups ? 'grp2' : ''}">${cols.map((c, i) => `<th class="${c.l ? 'l' : ''} ${c.bl ? 'bl' : ''}" ${c.sv ? `onclick="ordenar('${id}',${i})"` : ''} title="${esc(c.tt || '')}">${c.lab}${st && st.i === i ? (st.d > 0 ? ' ↑' : ' ↓') : ''}</th>`).join('')}</tr>`;
+  const body = rs.map(r => `<tr class="${r._cls || ''}">${cols.map(c => `<td class="${c.l ? 'l' : ''} ${c.bl ? 'bl' : ''} ${c.cls ? (typeof c.cls === 'function' ? c.cls(r) : c.cls) : ''}">${c.fn(r)}</td>`).join('')}</tr>`).join('');
+  return `<div class="tw" ${opts.h ? `style="max-height:${opts.h}"` : ''}><table id="${id}"><thead>${g}${head}</thead><tbody>${body || `<tr><td class="l mut" colspan="${cols.length}">Sin filas</td></tr>`}</tbody></table></div>`;
+}
+function ordenar(id, i) { const s = SORTS[id]; SORTS[id] = s && s.i === i ? { i, d: -s.d } : { i, d: -1 }; render(); }
+
+// ---------- PDA ----------
+const STATUS = ['Pendiente', 'En proceso', 'Completo', 'No aplica'];
+const pdaDe = (cod, ym = S.ym) => (PDA[ym] && PDA[ym][cod]) || null;
+function pdaAnterior(cod, ym = S.ym) { const ks = Object.keys(PDA).map(Number).filter(k => k < ym).sort((a, b) => b - a); for (const k of ks) if (PDA[k][cod]) return { ym: k, ...PDA[k][cod] }; return null; }
+function stBadge(cod, ambito) {
+  const p = pdaDe(cod); const st = p ? p.status || 'En proceso' : 'Pendiente';
+  return `<span class="st st-${st.split(' ')[0]}" onclick="editarPDA(${cod},'${ambito}')" title="Abrir plan de acción">${st}</span>`;
+}
+let CTX = {};
+function editarPDA(cod, ambito) {
+  const r = CTX[cod] || filaCliente(CLI.get(cod), P_());
+  const c = CLI.get(cod); const p = pdaDe(cod) || {}; const ant = pdaAnterior(cod);
+  const sug = pdaSugerido(r, ambito === 'CM' || ambito === 'MAY');
+  const ti = topeInfo(cod); const tope = ti.src === 'propio' ? ti.t : '';
+  const body = `
+  <div class="row small mut" style="margin-bottom:8px">${esc(c.canal)} · ${esc(c.sub)} · Vendedor ${c.ven} ${esc(c.venN)} · Sup. ${esc(c.sup)}</div>
+  <div class="box"><b>Diagnóstico:</b> <span class="q q${r.q || 4}">${QLAB[r.q || 0]}</span> &nbsp;·&nbsp; TS U3M ${fP(r.tsU3)} (canal ${fP(r.tsCanal)}) · Potencial ${r.pot == null ? '–' : nf0.format(r.pot * 100) + '/100'} · HL U3M ${fH(r.u3m) || '0'} (LY ${tieneTodos(P_().u3mly) ? fH(r.u3mly) || '0' : 's/d'}) · BD ${r.bdAm} · EDF ${r.edf ? r.edf.tot + ' (' + r.edf.rep + ')' : '–'} · Score ${r.sc ? nf1.format(r.sc[2]) : '–'} · SOM ${r.som ? fP(r.som.som) : '–'}</div>
+  <div class="box sug"><b>PDA sugerido</b> <button class="sm" style="float:right" onclick="$('pTxt').value=${esc(JSON.stringify(sug))}">Usar sugerido</button><div style="white-space:pre-wrap;margin-top:6px">${esc(sug)}</div></div>
+  ${ant ? `<div class="box"><b>PDA anterior (${ymLab(ant.ym)}, ${esc(ant.status || '')}):</b><div style="white-space:pre-wrap">${esc(ant.pda || '')}</div>${ant.seg ? `<div class="mut small">Seguimiento: ${esc(ant.seg)}</div>` : ''}</div>` : ''}
+  <div class="fl"><span>Plan de acción</span><textarea id="pTxt" rows="5">${esc(p.pda || '')}</textarea>
+  <span>Tope de volumen (HL/mes)</span><div class="row"><input id="pTope" type="number" step="0.1" style="width:120px" value="${esc(tope)}"> <span class="mut small">${c.canal === 'MAY' ? `vacío = tope general (${nf1.format(CFG.topeMay)} HL)` : `sugerido ${nf1.format(topeSugerido(r))} (promedio U3M)`}. Se aplica todos los meses hasta que lo cambies.</span></div>
+  <span>Status</span><select id="pSt">${STATUS.slice(1).map(s => opt(s, s, p.status || 'En proceso')).join('')}</select>
+  <span>Responsable</span><select id="pResp">${opt('', '—', p.resp)}${SUPS.map(s => opt(s, s, p.resp || c.sup)).join('')}</select>
+  <span>Fecha compromiso</span><input id="pFec" type="date" value="${esc(p.fec || '')}" style="width:170px">
+  <span>Seguimiento / comentarios</span><textarea id="pSeg" rows="3">${esc(p.seg || '')}</textarea></div>
+  ${p.por ? `<div class="mut small">Última edición: ${esc(p.por)} — ${new Date(p.ts).toLocaleString('es-AR')}</div>` : ''}
+  <div id="pMsg" class="msg"></div>`;
+  abrirDlg(`${cod} · ${esc(c.rs)} <span class="tag ${ambito === 'CM' ? 't-cm' : 't-top'}">${ambito}</span> <span class="mut small">${MESES[S.ym % 100 - 1]} ${Math.floor(S.ym / 100)}</span>`, body,
+    `<button onclick="cerrarDlg()">Cancelar</button><button class="pri" onclick="guardarPDA(${cod},'${ambito}')">Guardar</button>`);
+}
+async function guardarPDA(cod, ambito) {
+  if (!USER) { pedirUsuario(); return; }
+  const r = CTX[cod]; const o = { pda: $('pTxt').value.trim(), status: $('pSt').value, resp: $('pResp').value, fec: $('pFec').value, seg: $('pSeg').value.trim(), amb: ambito, q: r ? r.q || 0 : 0, por: USER, ts: Date.now() };
+  const tope = $('pTope').value;
+  try {
+    await ref(`pda/${S.ym}/${cod}`).set(o);
+    if (tope !== '' && +tope !== (topeInfo(cod).src === 'propio' ? topeInfo(cod).t : null)) await ref(`topes/${cod}`).set({ tope: +tope, desde: S.ym, por: USER, ts: Date.now() });
+    if (tope === '' && (TOPES[cod]?.tope != null || TOPE_EXC_DEF[cod] != null)) await ref(`topes/${cod}`).set({ quitado: true, por: USER, ts: Date.now() });
+    cerrarDlg();
+  } catch (e) { $('pMsg').innerHTML = `<b class="down">No se pudo guardar: ${esc(e.message)}</b>`; }
+}
+// autorizaciones por exceso de tope
+function editarAut(cod, ym) {
+  const c = CLI.get(cod); const a = (AUT[ym] && AUT[ym][cod]) || {};
+  const hl = hlM(cod, ym), t = topeDe(cod);
+  abrirDlg(`Autorización de exceso · ${cod} ${esc(c.rs)} · ${MESES[ym % 100 - 1]} ${Math.floor(ym / 100)}`,
+    `<div class="box">Venta del mes: <b>${fH(hl)} HL</b> · Tope: <b>${t == null ? 'sin tope' : nf1.format(t) + ' HL'}</b>${t ? ' · Exceso: <b class="down">' + fH(hl - t) + ' HL</b>' : ''}</div>
+    <div class="fl"><span>Autorizado por</span><input id="aQuien" value="${esc(a.quien || '')}" placeholder="Gerente CMQ de la región">
+    <span>Fecha</span><input id="aFec" type="date" value="${esc(a.fec || '')}" style="width:170px">
+    <span>Motivo / evidencia</span><textarea id="aMot" rows="3">${esc(a.mot || '')}</textarea></div>
+    ${a.por ? `<div class="mut small">Registró: ${esc(a.por)} — ${new Date(a.ts).toLocaleString('es-AR')}</div>` : ''}<div id="aMsg" class="msg"></div>`,
+    `${a.quien ? `<button onclick="borrarAut(${cod},${ym})">Borrar</button>` : ''}<button onclick="cerrarDlg()">Cancelar</button><button class="pri" onclick="guardarAut(${cod},${ym})">Guardar</button>`);
+}
+async function guardarAut(cod, ym) { if (!USER) { pedirUsuario(); return; } try { await ref(`aut/${ym}/${cod}`).set({ quien: $('aQuien').value.trim(), fec: $('aFec').value, mot: $('aMot').value.trim(), por: USER, ts: Date.now() }); cerrarDlg(); } catch (e) { $('aMsg').textContent = e.message; } }
+async function borrarAut(cod, ym) { await ref(`aut/${ym}/${cod}`).remove(); cerrarDlg(); }
+async function editarTope(cod) {
+  const c = CLI.get(cod); const i = topeInfo(cod); const t = i.src === 'propio' ? i.t : '';
+  abrirDlg(`Tope de volumen · ${cod} ${esc(c.rs)}`, `<div class="fl"><span>Tope propio (HL/mes)</span><input id="tV" type="number" step="0.1" value="${esc(t)}" style="width:140px"></div><div class="mut small">${c.canal === 'MAY' ? `Si lo dejás vacío, usa el tope general de mayoristas (${nf1.format(CFG.topeMay)} HL). Completalo solo para las excepciones.` : 'Vacío = sin tope.'} Se compara contra el negocio filtrado (hoy ${S.neg}).</div>`,
+    `<button onclick="cerrarDlg()">Cancelar</button><button class="pri" onclick="guardarTope(${cod})">Guardar</button>`);
+}
+async function guardarTope(cod) { if (!USER) { pedirUsuario(); return; } const v = $('tV').value; if (v === '') await ref(`topes/${cod}`).set({ quitado: true, por: USER, ts: Date.now() }); else await ref(`topes/${cod}`).set({ tope: +v, desde: S.ym, por: USER, ts: Date.now() }); cerrarDlg(); }
+function celdaTope(cod, ym) {
+  const hl = hlM(cod, ym); const t = topeDe(cod); if (!tieneMes(ym)) return { h: '', cls: '' };
+  if (t == null || !hl) return { h: fH(hl), cls: '' };
+  const aut = AUT[ym] && AUT[ym][cod];
+  if (hl > t) return { h: `<span class="cell-in" onclick="editarAut(${cod},${ym})" title="${aut ? 'Autorizado por ' + esc(aut.quien) : 'Excede el tope: clic para registrar la autorización'}">${fH(hl)}${aut ? ' ✓' : ' ⚠'}</span>`, cls: aut ? 'b-aut' : 'b-bad' };
+  if (hl >= t * (CFG.alerta || 0.8)) return { h: `<span title="Alerta: ${fP(hl / t)} del tope">${fH(hl)}</span>`, cls: 'b-warn' };
+  return { h: fH(hl), cls: 'b-ok' };
+}
+
+// =====================================================================
+//  Vistas
+// =====================================================================
+function vInfo() {
+  const P = DATA ? P_() : null;
+  $('main').innerHTML = `<div class="card info"><h2>Qué controla este archivo</h2>
+  <h3>2.4.1.3 · Clientes TOP por volumen (120 pts)</h3>
+  <p>Todos los meses, por canal, el TOP ${CFG.topN} de clientes de CZA y UNG según el volumen acumulado del año (YTD). Para cada cliente: R3 (últimos 3 meses) y MMAA (mismo mes del año anterior) con su peso sobre el canal y sobre el total, Trade Spend sobre facturación y su evolución, brand distribution, cantidad de EDF, score de estándar de ejecución, SOM del último Censo Thomas y el plan de acción con tope de volumen.</p>
+  <h3>2.4.1.6 · Gestión del canal mayorista (70 pts)</h3>
+  <ul><li><b>Canal mayorista:</b> estrategia de la región (mix mayorista menor al ${fP(CFG.mixMay)} y máximos permitidos por cliente), su evolución mes a mes y qué mayorista genera desvíos, a nivel PDV.</li>
+  <li><b>Comportamiento mayorista (CM):</b> clientes que sin ser mayoristas tienen dinámica de mayorista. Regla: venta YTD mayor a ${CFG.factorCM} veces el promedio de su subcanal. Además se muestran las señales que pide el manual (mix de litro y lata 473, mix UNG, mix Above Core, EDF, descuentos y SKUs).</li>
+  <li><b>Nivel 2 (100 %):</b> cada cliente CM con <b>tope de volumen</b>, control mes a mes y, cuando se supera, la <b>autorización del gerente de CMQ</b> registrada.</li></ul>
+  <h3>Cómo se usa</h3>
+  <ul><li>Elegí el <b>mes</b> arriba: todo se calcula a ese mes (AM), con LY = mismo mes del año anterior, YTD = enero a ese mes, U3M = últimos 3 meses.</li>
+  <li>El status de cada cliente abre su <b>plan de acción</b>: trae un diagnóstico automático (TS del cliente vs su canal × potencial) y un PDA sugerido que se edita. Queda guardado por mes con quién lo cargó.</li>
+  <li>Topes: los mayoristas usan el tope general (${nf1.format(CFG.topeMay)} HL/mes) salvo que tengan uno propio (excepción). ${LEY()} Clic en la celda roja para registrar la autorización.</li>
+  <li>La barra de "Datos" muestra hasta qué fecha está cada base: verde al día, amarillo atrasada, rojo vieja.</li></ul>
+  <h3>Diagnóstico y potencial</h3>
+  <p><b>TS alto</b> = TS U3M del cliente mayor al TS U3M de su canal. <b>Potencial</b> (0-100) = percentil dentro del canal de: crecimiento del volumen U3M vs mismo período del año anterior (40 %), evolución del surtido vs año anterior (30 %) y espacio de share según el censo (30 %). Alto ≥ 50.</p>
+  <p class="mut small">Cuadrantes: <span class="q q1">Sobreinvertido</span> TS alto · potencial bajo · <span class="q q2">Invertir con tope</span> TS alto · potencial alto · <span class="q q3">Capturar volumen</span> TS bajo · potencial alto · <span class="q q4">Sostener</span> TS bajo · potencial bajo.</p>
+  ${P ? `<p class="mut small">Meses con venta cargada: ${MESES_DATA.map(ymLab).join(', ')}. Meses con WAPI: ${wapiMeses().map(ymLab).join(', ') || '–'}.</p>` : ''}
+  </div>`;
+}
+
+function vTop() {
+  const { res, totNeg, P } = calcTop(); CTX = {};
+  const lyOk = tieneTodos(P.ly), wOk = wapiMeses().includes(S.ym);
+  const peso = (v, r, k) => { const d = S.peso === 'canal' ? r.tot[k] : totNeg[k]; return fP(div(v, d)); };
+  let rows = [];
+  for (const g of res) {
+    rows.push({ _cls: 'canal', canal: g.canal, g, isC: true });
+    g.rows.forEach(r => { CTX[r.cod] = r; rows.push({ ...r, g }); });
+  }
+  const cols = [
+    { lab: 'Cliente', l: true, cls: 'cli', fn: r => r.isC ? `${r.canal} <span class="mut small">· top ${CFG.topN} = ${fP(div(r.g.topSum.ytd, r.g.tot.ytd))} del YTD del canal</span>` : `<span class="lk" onclick="verFicha(${r.cod})">${r.cod}</span> ${esc(r.c.rs)} ${r.c.cmChess ? '<span class="tag t-chess" title="Marcado como CM en Chess">CM</span>' : ''}` },
+    { lab: 'Sup.', l: true, fn: r => r.isC ? '' : `<span class="small mut">${esc((r.c.sup || '').split(' ')[0])}</span>` },
+    { lab: 'HL LY', bl: true, fn: r => r.isC ? fH(r.g.tot.ly) : fH(r.ly) }, { lab: 'Peso', fn: r => r.isC ? fP(div(r.g.tot.ly, totNeg.ly)) : peso(r.ly, r.g, 'ly') },
+    { lab: 'HL YTD', bl: true, fn: r => r.isC ? fH(r.g.tot.ytd) : fH(r.ytd) }, { lab: 'Peso', fn: r => r.isC ? fP(div(r.g.tot.ytd, totNeg.ytd)) : peso(r.ytd, r.g, 'ytd') },
+    { lab: 'HL U3M (R3)', bl: true, fn: r => r.isC ? fH(r.g.tot.u3m) : fH(r.u3m) }, { lab: 'Peso', fn: r => r.isC ? fP(div(r.g.tot.u3m, totNeg.u3m)) : peso(r.u3m, r.g, 'u3m') },
+    { lab: 'HL AM', bl: true, fn: r => r.isC ? fH(r.g.tot.am) : fH(r.am) }, { lab: 'Peso', fn: r => r.isC ? fP(div(r.g.tot.am, totNeg.am)) : peso(r.am, r.g, 'am') },
+    { lab: 'MMAA', tt: 'AM vs mismo mes del año anterior', fn: r => !lyOk ? '' : r.isC ? fVar(r.g.tot.am, r.g.tot.ly) : fVar(r.am, r.ly) },
+    { lab: 'TS AM', bl: true, tt: 'Descuento $ / facturación del mes (WAPI)', fn: r => r.isC ? fP(r.g.tsCam) : fP(r.tsAm) },
+    { lab: 'TS U3M', tt: 'Cliente vs promedio de su canal', fn: r => r.isC ? `<span title="TS del canal U3M">${fP(r.g.tsC)}</span>` : `<span class="${r.tsAlto ? 'down' : ''}">${fP(r.tsU3)}</span>` },
+    { lab: 'Evol. TS', fn: r => r.isC ? '' : sparkTS(r.cod) },
+    { lab: 'BD LY', bl: true, tt: 'Brand distribution: artículos distintos comprados (según filtros)', fn: r => r.isC ? '' : r.bdLy || '' }, { lab: 'BD LM', fn: r => r.isC ? '' : r.bdLm || '' }, { lab: 'BD AM', fn: r => r.isC ? '' : r.bdAm || '' },
+    { lab: 'EDF', bl: true, fn: r => r.isC ? '' : r.edf ? `${r.edf.tot} <span class="small mut">${r.edf.rep === 'SI' ? 'repaga' : r.edf.rep === 'NO' ? 'no repaga' : 'mixto'}</span>` : '' },
+    { lab: 'Score EE', tt: 'Último estándar de ejecución', fn: r => r.isC ? '' : r.sc ? `<span class="${r.sc[2] < CFG.scoreBajo ? 'down' : ''}" title="${ymdLab(r.sc[1])}">${nf1.format(r.sc[2])}</span>` : '' },
+    { lab: 'SOM', fn: r => r.isC ? '' : r.som ? fP(r.som.som) : '' },
+    { lab: 'Diagnóstico', bl: true, l: true, fn: r => r.isC ? '' : `<span class="q q${r.q || 4}" title="${QLAB[r.q || 0]}">${QCORTO[r.q || 0]}</span>` },
+    { lab: 'PDA', l: true, fn: r => r.isC ? '' : stBadge(r.cod, 'TOP') },
+  ];
+  const tsum = res.reduce((s, g) => s + g.topSum.ytd, 0);
+  $('main').innerHTML = `<div class="kpis">
+    <div class="kpi"><div class="l">HL ${S.neg} YTD</div><div class="v">${nf0.format(totNeg.ytd)}</div><div class="s">${tieneTodos(P.ytdly) ? 'vs LY ' + fVar(totNeg.ytd, hlTot(P.ytdly)) : 'sin año anterior cargado'}</div></div>
+    <div class="kpi"><div class="l">Concentración TOP ${CFG.topN}×canal</div><div class="v">${fP(div(tsum, totNeg.ytd))}</div><div class="s">del YTD del negocio</div></div>
+    <div class="kpi"><div class="l">PDA del mes</div><div class="v">${res.reduce((s, g) => s + g.rows.filter(r => pdaDe(r.cod)).length, 0)} / ${res.reduce((s, g) => s + g.rows.length, 0)}</div><div class="s">cargados</div></div>
+  </div>
+  ${!lyOk ? `<div class="box">⚠ No está cargada la venta de ${ymLab(S.ym - 100)}: LY, MMAA y potencial quedan incompletos. Sumá las bases del año anterior en "Cargar datos".</div>` : ''}
+  ${!wOk ? `<div class="box">⚠ No hay WAPI para ${ymLab(S.ym)}: el TS del mes queda vacío (el U3M usa los meses que haya).</div>` : ''}
+  <div class="card"><h2>Top ${CFG.topN} clientes por canal — ${S.neg}${S.marca ? ' · ' + esc(S.marca) : ''}${S.cal ? ' · ' + esc(S.cal) : ''}</h2>
+  <div class="hint">Ranking por HL YTD de ${MESES[S.ym % 100 - 1]} ${Math.floor(S.ym / 100)}. Peso = participación sobre ${S.peso === 'canal' ? 'el total del canal (en la fila del canal: canal sobre el total)' : 'el total del negocio'}. Clic en el status para cargar el plan de acción.</div>
+  ${tabla('tTop', cols, rows, { groups: [['', 2], ['Mismo mes año anterior', 2], ['Acumulado año', 2], ['Últimos 3 meses', 2], ['Mes actual', 3], ['Trade Spend', 3], ['Brand distribution', 3], ['Ejecución', 3], ['Plan de acción', 2]] })}</div>`;
+}
+const LEY = () => `<span class="b-ok" style="padding:0 4px">verde</span> OK · <span class="b-warn" style="padding:0 4px">amarillo</span> ≥ ${nf0.format((CFG.alerta || 0.8) * 100)} % del tope · <span class="b-bad" style="padding:0 4px">rojo ⚠</span> excedido sin autorización · <span class="b-aut" style="padding:0 4px">azul ✓</span> excedido con autorización del gerente CMQ.`;
+const hlTot = yms => yms.reduce((s, ym) => s + (TOT.get(ym) || 0), 0);
+function sparkTS(cod) {
+  const ms = []; for (let k = -5; k <= 0; k++) ms.push(ymAdd(S.ym, k));
+  const v = ms.map(m => tsCli(cod, [m])); const ok = v.filter(x => x != null); if (ok.length < 2) return '';
+  const mx = Math.max(...ok, 0.01), W = 64, H = 18;
+  const pts = v.map((x, i) => x == null ? null : [i * (W / 5), H - 2 - (x / mx) * (H - 4)]);
+  const d = pts.filter(Boolean).map((p, i) => (i ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join(' ');
+  return `<svg class="spark" width="${W}" height="${H}"><title>${ms.map((m, i) => ymLab(m) + ': ' + fP(v[i])).join('\n')}</title><path d="${d}" fill="none" stroke="#f07a1e" stroke-width="1.6"/></svg>`;
+}
+
+function vCM() {
+  const all = calcCM(); const P = P_(); CTX = {};
+  const visibles = new Set(clisVisibles().map(c => c.cod));
+  let L = all.filter(x => visibles.has(x.cod));
+  const nCM = L.filter(x => x.cm).length, nChess = L.filter(x => x.cm && x.c.cmChess).length;
+  const noChess = L.filter(x => x.cm && !x.c.cmChess).length, chessNoCm = L.filter(x => !x.cm && x.c.cmChess).length;
+  const cand = L.filter(x => !x.cm && x.ratio >= CFG.factorCM * 0.6 && x.nSen >= 3);
+  const lista = S.soloCM ? L.filter(x => x.cm || x.c.cmChess) : L.filter(x => x.cm || x.c.cmChess || cand.includes(x));
+  lista.forEach(x => { const r = filaCliente(x.c, P); CTX[x.cod] = r; x.r = r; });
+  // potencial y diagnóstico contra su canal
+  const porCanal = {}; lista.forEach(x => (porCanal[x.c.canal] = porCanal[x.c.canal] || []).push(x.r));
+  for (const k in porCanal) { const cl = [...CLI.values()].filter(c => c.canal === k).map(c => c.cod); const tsC = tsGrupo(cl, P.u3m); potencial(porCanal[k], porCanal[k]); porCanal[k].forEach(r => diagnostico(r, tsC)); }
+  const exc = lista.filter(x => { const t = topeDe(x.cod); return t != null && hlM(x.cod, S.ym) > t && !(AUT[S.ym] && AUT[S.ym][x.cod]); }).length;
+  const sinTope = lista.filter(x => x.cm && topeDe(x.cod) == null).length;
+  const sig = (b, v, a, f) => `<span class="${b ? 'down' : ''}" title="Promedio subcanal: ${f(a)}">${f(v)}${b ? ' ●' : ''}</span>`;
+  const cols = [
+    { lab: 'Cliente', l: true, cls: 'cli', sv: x => x.c.rs, fn: x => `<span class="lk" onclick="verFicha(${x.cod})">${x.cod}</span> ${esc(x.c.rs)} ${x.cm ? '<span class="tag t-cm">CM</span>' : ''} ${x.c.cmChess ? '<span class="tag t-chess" title="Programa COMPORTAMIENTO MAYORISTA = SI en Chess">Chess</span>' : ''}` },
+    { lab: 'Canal', l: true, sv: x => x.c.canal, fn: x => esc(x.c.canal) }, { lab: 'Subcanal', l: true, sv: x => x.sub, fn: x => `<span class="small">${esc(x.sub)}</span>` },
+    { lab: 'Vendedor', l: true, sv: x => x.c.venN, fn: x => `<span class="small">${x.c.ven} ${esc(x.c.venN)}</span>` },
+    { lab: 'HL YTD', bl: true, sv: x => x.ytd, fn: x => fH(x.ytd) }, { lab: 'Prom. subcanal', sv: x => x.prom, fn: x => fH(x.prom) },
+    { lab: 'Veces', tt: `YTD / promedio del subcanal. CM si supera ${CFG.factorCM}`, sv: x => x.ratio, fn: x => `<b class="${x.cm ? 'down' : ''}">${nf1.format(x.ratio)}x</b>` },
+    { lab: 'Mix 1L+473', bl: true, sv: x => x.m.m12, fn: x => sig(x.sen.m12, x.m.m12, x.avg.m12, fP) },
+    { lab: 'Mix UNG', sv: x => x.m.ung, fn: x => sig(x.sen.ung, x.m.ung, x.avg.ung, fP) },
+    { lab: 'Mix Above Core', sv: x => x.m.ab, fn: x => sig(x.sen.ab, x.m.ab, x.avg.ab, fP) },
+    { lab: 'SKUs', sv: x => x.m.sku, fn: x => sig(x.sen.sku, x.m.sku, x.avg.sku, v => v == null ? '–' : nf0.format(v)) },
+    { lab: 'EDF', sv: x => x.m.edf, fn: x => sig(x.sen.edf, x.m.edf, x.avg.edf, v => v == null ? '–' : nf1.format(v)) },
+    { lab: 'TS U3M', sv: x => x.m.ts, fn: x => sig(x.sen.ts, x.m.ts, x.avg.ts, fP) },
+    { lab: 'Señales', tt: 'Cantidad de parámetros del manual que dan como mayorista', sv: x => x.nSen, fn: x => `<b>${x.nSen}</b>/7` },
+    { lab: 'HL AM', bl: true, sv: x => x.r.am, fn: x => fH(x.r.am) }, { lab: 'Score', fn: x => x.r.sc ? nf1.format(x.r.sc[2]) : '' }, { lab: 'SOM', fn: x => x.r.som ? fP(x.r.som.som) : '' },
+    { lab: 'Diagnóstico', l: true, bl: true, sv: x => x.r.q, fn: x => `<span class="q q${x.r.q || 4}" title="${QLAB[x.r.q || 0]}">${QCORTO[x.r.q || 0]}</span>` },
+    { lab: 'PDA', l: true, fn: x => stBadge(x.cod, 'CM') },
+  ];
+  // control de topes, meses del año
+  const y = Math.floor(S.ym / 100); const meses = rango(y * 100 + 1, S.ym);
+  const ctl = lista.filter(x => x.cm || x.c.cmChess || topeDe(x.cod) != null);
+  const colsT = [
+    { lab: 'Cliente', l: true, cls: 'cli', fn: x => `${x.cod} ${esc(x.c.rs)}` },
+    { lab: 'Tope HL/mes', fn: x => `<span class="lk" onclick="editarTope(${x.cod})">${topeTxt(x.cod)}</span>` },
+    ...meses.map(m => ({ lab: MC[m % 100 - 1], cls: x => celdaTope(x.cod, m).cls, fn: x => celdaTope(x.cod, m).h })),
+    { lab: 'Excesos', bl: true, fn: x => { const t = topeDe(x.cod); if (t == null) return ''; const n = meses.filter(m => hlM(x.cod, m) > t).length, a = meses.filter(m => hlM(x.cod, m) > t && AUT[m] && AUT[m][x.cod]).length; return n ? `${n} <span class="small mut">(${a} aut.)</span>` : '0'; } },
+  ];
+  $('main').innerHTML = `<div class="kpis">
+    <div class="kpi"><div class="l">Clientes CM detectados</div><div class="v">${nCM}</div><div class="s">YTD &gt; ${CFG.factorCM}× su subcanal</div></div>
+    <div class="kpi"><div class="l">Marcados en Chess</div><div class="v">${nChess} / ${nCM}</div><div class="s">${noChess} sin marcar · ${chessNoCm} marcados que ya no dan CM</div></div>
+    <div class="kpi"><div class="l">Sin tope definido</div><div class="v ${sinTope ? 'down' : ''}">${sinTope}</div><div class="s">requisito nivel 2</div></div>
+    <div class="kpi"><div class="l">Excesos sin autorización</div><div class="v ${exc ? 'down' : ''}">${exc}</div><div class="s">${MESES[S.ym % 100 - 1]}</div></div>
+    <div class="kpi"><div class="l">Candidatos</div><div class="v">${cand.length}</div><div class="s">≥ ${nf1.format(CFG.factorCM * 0.6)}× y 3+ señales</div></div>
+  </div>
+  <div class="card"><h2>Clientes con comportamiento mayorista</h2>
+  <div class="hint">YTD ${S.neg} a ${MESES[S.ym % 100 - 1]}. Las señales comparan contra el promedio de su subcanal; ● = da como mayorista (mix 1L+473 +20 %, mix UNG y Above Core −20 %, SKUs +50 %, EDF el doble, TS +20 %). Los mixes se calculan sobre todo el portafolio.
+  <label style="margin-left:10px"><input type="checkbox" ${S.soloCM ? '' : 'checked'} onchange="S.soloCM=!this.checked;render()"> mostrar candidatos</label></div>
+  ${tabla('tCM', cols, lista)}</div>
+  <div class="card"><h2>Control de tope de volumen — ${y}</h2>
+  <div class="hint">HL por mes vs tope (${S.neg}). ${LEY()} Clic en la celda roja para registrar la autorización.</div>
+  ${tabla('tCMt', colsT, ctl, { h: '50vh' })}</div>`;
+}
+
+let charts = [];
+function vMay() {
+  charts.forEach(c => c.destroy()); charts = [];
+  const P = P_(); const y = S.anioMay || Math.floor(S.ym / 100);
+  const anios = [...new Set(MESES_DATA.map(m => Math.floor(m / 100)))];
+  const may = [...CLI.values()].filter(c => c.canal === 'MAY');
+  const visibles = new Set(clisVisibles().map(c => c.cod));
+  const mayV = may.filter(c => visibles.has(c.cod));
+  // serie mensual de mix
+  const serie = MESES_DATA.map(m => { const t = TOT.get(m) || 0, v = may.reduce((s, c) => s + hlM(c.cod, m), 0); return { m, t, v, mix: div(v, t) }; });
+  const ytd = P.ytd, ytdly = P.ytdly;
+  const vY = may.reduce((s, c) => s + hlS(c.cod, ytd), 0), tY = hlTot(ytd);
+  const vA = may.reduce((s, c) => s + hlM(c.cod, S.ym), 0), tA = TOT.get(S.ym) || 0;
+  const vL = may.reduce((s, c) => s + hlS(c.cod, ytdly), 0), tL = hlTot(ytdly);
+  // tabla mensual por cliente con tope
+  const meses = rango(y * 100 + 1, y * 100 + 12).filter(tieneMes);
+  const rowsC = mayV.map(c => ({ c, cod: c.cod, ytd: meses.reduce((s, m) => s + hlM(c.cod, m), 0) })).filter(x => x.ytd > 0).sort((a, b) => b.ytd - a.ytd);
+  CTX = {}; rowsC.forEach(x => { CTX[x.cod] = filaCliente(x.c, P); });
+  { const rr = rowsC.map(x => CTX[x.cod]); potencial(rr, rr); const tsC = tsGrupo(may.map(c => c.cod), P.u3m); rr.forEach(r => diagnostico(r, tsC)); }
+  const colsC = [
+    { lab: 'Cliente', l: true, cls: 'cli', sv: x => x.c.rs, fn: x => `<span class="lk" onclick="verFicha(${x.cod})">${x.cod}</span> ${esc(x.c.rs)}` },
+    { lab: 'Tope HL/mes', sv: x => topeDe(x.cod), fn: x => `<span class="lk" onclick="editarTope(${x.cod})">${topeTxt(x.cod)}</span>` },
+    ...meses.map(m => ({ lab: MC[m % 100 - 1], sv: x => hlM(x.cod, m), cls: x => celdaTope(x.cod, m).cls, fn: x => celdaTope(x.cod, m).h })),
+    { lab: 'Total', bl: true, sv: x => x.ytd, fn: x => `<b>${fH(x.ytd)}</b>` },
+    { lab: 'Peso', sv: x => x.ytd, fn: x => fP(div(x.ytd, meses.reduce((s, m) => s + may.reduce((a, c) => a + hlM(c.cod, m), 0), 0))) },
+    { lab: 'PDA', l: true, bl: true, fn: x => stBadge(x.cod, 'MAY') },
+  ];
+  const totRow = { _cls: 'tot', c: { rs: 'Total' }, cod: 0, ytd: rowsC.reduce((s, x) => s + x.ytd, 0) };
+  const colsCt = colsC.map((col, i) => ({ ...col, fn: x => x._cls === 'tot' ? (i === 0 ? 'Total' : (i >= 2 && i < 2 + meses.length) ? fH(rowsC.reduce((s, r) => s + hlM(r.cod, meses[i - 2]), 0)) : col.lab === 'Total' ? fH(x.ytd) : '') : col.fn(x), cls: x => x._cls === 'tot' ? '' : (typeof col.cls === 'function' ? col.cls(x) : col.cls || '') }));
+  // marcas agrupadas YTD vs LY (todo el negocio filtrado, solo MAY)
+  const gr = new Map(); const ys = new Set(ytd), ls = new Set(ytdly); const mayS = new Set(may.map(c => c.cod));
+  for (let i = 0; i < V.hl.length; i++) { if (!mayS.has(V.cli[i])) continue; const ym = V.ym[i]; const a = V.art[i]; if (!artOk(a)) continue; const g = ART.get(a).g; let o = gr.get(g); if (!o) gr.set(g, o = [0, 0]); if (ys.has(ym)) o[0] += V.hl[i]; if (ls.has(ym)) o[1] += V.hl[i]; }
+  const lyMay = tieneTodos(ytdly);
+  const rowsG = [...gr.entries()].map(([g, [a, l]]) => ({ g, a, l })).filter(x => x.a || x.l).sort((a, b) => b.a - a.a);
+  const colsG = [{ lab: 'Marca agrupada', l: true, sv: x => x.g, fn: x => esc(x.g) }, { lab: `HL ${y - 1} (YTD)`, sv: x => x.l, fn: x => fH(x.l) }, { lab: `HL ${y} (YTD)`, sv: x => x.a, fn: x => fH(x.a) }, { lab: 'Var', sv: x => x.a - x.l, fn: x => lyMay ? `<span class="${x.a - x.l >= 0 ? 'up' : 'down'}">${fH(x.a - x.l) || '0'}</span>` : '' }, { lab: 'Var %', sv: x => div(x.a, x.l), fn: x => lyMay ? fVar(x.a, x.l) : '' }, { lab: 'Mix', sv: x => x.a, fn: x => fP(div(x.a, rowsG.reduce((s, r) => s + r.a, 0))) }];
+  const desv = rowsC.filter(x => { const t = topeDe(x.cod); return t != null && hlM(x.cod, S.ym) > t && !(AUT[S.ym] && AUT[S.ym][x.cod]); });
+  $('main').innerHTML = `<div class="kpis">
+    <div class="kpi"><div class="l">Mix mayorista YTD</div><div class="v ${div(vY, tY) > CFG.mixMay ? 'down' : 'up'}">${fP(div(vY, tY))}</div><div class="s">objetivo &lt; ${fP(CFG.mixMay)} · LY ${fP(div(vL, tL))}</div></div>
+    <div class="kpi"><div class="l">Mix mayorista ${MC[S.ym % 100 - 1]}</div><div class="v ${div(vA, tA) > CFG.mixMay ? 'down' : 'up'}">${fP(div(vA, tA))}</div><div class="s">${fH(vA)} HL de ${fH(tA)}</div></div>
+    <div class="kpi"><div class="l">HL mayoristas YTD</div><div class="v">${nf0.format(vY)}</div><div class="s">${tieneTodos(ytdly) ? 'vs LY ' + fVar(vY, vL) : 'sin LY completo'}</div></div>
+    <div class="kpi"><div class="l">Desvíos ${MC[S.ym % 100 - 1]}</div><div class="v ${desv.length ? 'down' : ''}">${desv.length}</div><div class="s">mayoristas sobre el tope sin autorización</div></div>
+  </div>
+  <div class="card"><h2>Venta y mix mayorista</h2><div class="hint">Estrategia de la región: mix mayorista menor al ${fP(CFG.mixMay)} (${S.neg}${S.marca ? ' · ' + esc(S.marca) : ''}).</div><div style="height:300px"><canvas id="chMay"></canvas></div></div>
+  <div class="card"><h2>Mayoristas — máximos permitidos ${y}</h2>
+  <div class="row hint">Estrategia de la región: máximo ${nf1.format(CFG.topeMay)} HL/mes por mayorista (general), con excepciones por cliente. Si se excede, se necesita la confirmación del EDV / gerente CMQ. ${LEY()} Año <select onchange="S.anioMay=+this.value;render()">${anios.map(a => opt(a, a, y)).join('')}</select></div>
+  ${tabla('tMay', colsCt, [...rowsC, totRow], { h: '55vh' })}</div>
+  <div class="card"><h2>Marcas en mayoristas — YTD ${y} vs ${y - 1}</h2>${tabla('tMayG', colsG, rowsG, { h: '45vh' })}</div>`;
+  const ctx = $('chMay');
+  if (window.Chart && ctx) {
+    charts.push(new Chart(ctx, {
+      data: {
+        labels: serie.map(s => ymLab(s.m)), datasets: [
+          { type: 'line', label: 'Mix MAY', data: serie.map(s => s.mix * 100), yAxisID: 'y2', borderColor: '#f5f5f5', backgroundColor: '#f5f5f5', tension: .25, pointRadius: 3 },
+          { type: 'line', label: 'Mix permitido', data: serie.map(() => CFG.mixMay * 100), yAxisID: 'y2', borderColor: '#3fb27f', borderDash: [6, 4], pointRadius: 0 },
+          { type: 'bar', label: 'Venta mayorista', data: serie.map(s => s.v), backgroundColor: '#f07a1e' },
+          { type: 'bar', label: 'Ventas totales', data: serie.map(s => s.t), backgroundColor: '#4a9eda88' }]
+      },
+      options: { maintainAspectRatio: false, plugins: { legend: { labels: { color: '#ccc' } }, tooltip: { callbacks: { label: c => c.dataset.yAxisID === 'y2' ? c.dataset.label + ': ' + nf1.format(c.raw) + ' %' : c.dataset.label + ': ' + nf0.format(c.raw) + ' HL' } } }, scales: { x: { ticks: { color: '#aaa' }, grid: { color: '#2a2a2a' } }, y: { ticks: { color: '#aaa' }, grid: { color: '#2a2a2a' } }, y2: { position: 'right', min: 0, ticks: { color: '#aaa', callback: v => v + ' %' }, grid: { display: false } } } }
+    }));
+  }
+}
+
+function verFicha(cod) { S.cli = cod; S.tab = 'ficha'; render(); window.scrollTo(0, 0); }
+function vFicha() {
+  charts.forEach(c => c.destroy()); charts = [];
+  const c = CLI.get(S.cli);
+  let h = `<div class="card"><h2>Ficha de cliente</h2><div class="row"><input id="fq" placeholder="Código o razón social" style="width:320px" value="${esc(S.q)}" oninput="S.q=this.value;buscarCli()"><div id="fres" class="row"></div></div></div>`;
+  if (!c) { $('main').innerHTML = h; buscarCli(); return; }
+  const P = P_(); const r = filaCliente(c, P); CTX[c.cod] = r;
+  const tsC = tsGrupo([...CLI.values()].filter(x => x.canal === c.canal).map(x => x.cod), P.u3m); r.pot = null; diagnostico(r, tsC);
+  const meses = MESES_DATA.slice(-24);
+  const pdas = Object.keys(PDA).map(Number).sort((a, b) => b - a).filter(k => PDA[k][c.cod]).map(k => ({ ym: k, ...PDA[k][c.cod] }));
+  const est = (EST.get(c.cod) || []).slice(-8).reverse();
+  const e = EDF[c.cod];
+  h += `<div class="card"><h2>${c.cod} · ${esc(c.rs)} ${c.cmChess ? '<span class="tag t-chess">CM en Chess</span>' : ''}</h2>
+  <div class="hint">${esc(c.canal)} · ${esc(c.sub)} · Vendedor ${c.ven} ${esc(c.venN)} · Sup. ${esc(c.sup)} · ${esc(c.dom || '')} ${esc(c.loc || '')} · Lista ${esc(c.lista || '')} · Pago ${esc(c.pago || '')} ${c.plazo ? '(' + c.plazo + ' días)' : ''} ${c.anu ? '<b class="down">ANULADO</b>' : ''}</div>
+  <div class="kpis"><div class="kpi"><div class="l">HL YTD ${S.neg}</div><div class="v">${fH(r.ytd) || '0'}</div><div class="s">${tieneTodos(P.ytdly) ? 'vs LY ' + fVar(r.ytd, r.ytdly) : ''}</div></div>
+  <div class="kpi"><div class="l">HL U3M</div><div class="v">${fH(r.u3m) || '0'}</div><div class="s">LY ${tieneTodos(P.u3mly) ? fH(r.u3mly) || '0' : 'sin datos'}</div></div>
+  <div class="kpi"><div class="l">TS U3M</div><div class="v">${fP(r.tsU3)}</div><div class="s">canal ${fP(tsC)}</div></div>
+  <div class="kpi"><div class="l">Brand distribution</div><div class="v">${r.bdAm}</div><div class="s">LM ${r.bdLm} · LY ${r.bdLy}</div></div>
+  <div class="kpi"><div class="l">EDF</div><div class="v">${e ? e.CZA + e.UNG : 0}</div><div class="s">${e ? `CZA ${e.CZA} · UNG ${e.UNG} · repaga ${r.edf.rep}` : 'sin equipos'}</div></div>
+  <div class="kpi"><div class="l">Estándar ejecución</div><div class="v">${r.sc ? nf1.format(r.sc[2]) : '–'}</div><div class="s">${r.sc ? ymdLab(r.sc[1]) : ''}</div></div>
+  <div class="kpi"><div class="l">SOM</div><div class="v">${r.som ? fP(r.som.som) : '–'}</div><div class="s">${r.som ? 'censo ' + esc(r.som.cid) + ' · ' + nf1.format(r.som.hl) + ' HL declarados' : ''}</div></div>
+  <div class="kpi"><div class="l">Tope</div><div class="v"><span class="lk" onclick="editarTope(${c.cod})">${topeTxt(c.cod)}</span></div><div class="s">HL/mes · PDA ${stBadge(c.cod, c.canal === 'MAY' ? 'MAY' : 'TOP')}</div></div></div>
+  <div class="grid2"><div><div style="height:260px"><canvas id="chF"></canvas></div></div><div><div style="height:260px"><canvas id="chT"></canvas></div></div></div></div>
+  <div class="grid2"><div class="card"><h2>Planes de acción</h2>${pdas.length ? pdas.map(p => `<div class="box"><b>${ymLab(p.ym)}</b> <span class="st st-${(p.status || 'En').split(' ')[0]}">${esc(p.status || '')}</span> <span class="q q${p.q || 4}">${QCORTO[p.q || 0]}</span> <span class="mut small">${esc(p.por || '')}</span><div style="white-space:pre-wrap">${esc(p.pda || '')}</div>${p.seg ? `<div class="mut small">Seguimiento: ${esc(p.seg)}</div>` : ''}</div>`).join('') : '<div class="mut">Sin planes cargados.</div>'}</div>
+  <div class="card"><h2>EDF y estándar de ejecución</h2>${e ? `<table><thead><tr><th class="l">Equipo</th><th>Negocio</th><th>Repaga</th><th>Colocado</th></tr></thead><tbody>${e.det.map(d => `<tr><td class="l">${esc(d[0])}</td><td>${d[1]}</td><td>${d[2] ? 'SI' : 'NO'}</td><td>${ymdLab(d[3])}</td></tr>`).join('')}</tbody></table>` : '<div class="mut">Sin equipos instalados.</div>'}
+  <h3 style="color:var(--acc2);font-size:13px;margin:14px 0 4px">Relevamientos</h3>${est.length ? `<table><thead><tr><th class="l">Fecha</th><th>Score</th><th>Precio</th><th>Disponib.</th><th>Frío</th></tr></thead><tbody>${est.map(x => `<tr><td class="l">${ymdLab(x[1])}</td><td><b>${nf1.format(x[2])}</b></td><td>${nf1.format(x[3])}</td><td>${nf1.format(x[4])}</td><td>${nf1.format(x[5])}</td></tr>`).join('')}</tbody></table>` : '<div class="mut">Sin relevamientos.</div>'}</div></div>`;
+  $('main').innerHTML = h;
+  if (window.Chart) {
+    const opts = (y2) => ({ maintainAspectRatio: false, plugins: { legend: { labels: { color: '#ccc' } } }, scales: { x: { ticks: { color: '#aaa' }, grid: { color: '#2a2a2a' } }, y: { ticks: { color: '#aaa' }, grid: { color: '#2a2a2a' } }, ...(y2 ? { y2: { position: 'right', min: 0, ticks: { color: '#aaa' }, grid: { display: false } } } : {}) } });
+    charts.push(new Chart($('chF'), { data: { labels: meses.map(ymLab), datasets: [{ type: 'bar', label: 'HL ' + S.neg, data: meses.map(m => hlM(c.cod, m)), backgroundColor: '#f07a1e' }, { type: 'line', label: 'Brand distribution', data: meses.map(m => bdM(c.cod, m)), yAxisID: 'y2', borderColor: '#4a9eda', pointRadius: 2 }, ...(topeDe(c.cod) != null ? [{ type: 'line', label: 'Tope', data: meses.map(() => topeDe(c.cod)), borderColor: '#e5534b', borderDash: [5, 4], pointRadius: 0 }] : [])] }, options: opts(true) }));
+    const wm = wapiMeses().slice(-12);
+    charts.push(new Chart($('chT'), { type: 'line', data: { labels: wm.map(ymLab), datasets: [{ label: 'TS % cliente', data: wm.map(m => { const v = tsCli(c.cod, [m]); return v == null ? null : v * 100; }), borderColor: '#f07a1e', spanGaps: true }, { label: 'TS % canal', data: wm.map(m => { const v = tsGrupo([...CLI.values()].filter(x => x.canal === c.canal).map(x => x.cod), [m]); return v == null ? null : v * 100; }), borderColor: '#888', borderDash: [5, 4] }] }, options: opts(false) }));
+  }
+  buscarCli();
+}
+function buscarCli() {
+  const el = $('fres'); if (!el) return; const q = AG.N(S.q); if (q.length < 2) { el.innerHTML = '<span class="mut small">Escribí al menos 2 letras o el código.</span>'; return; }
+  const L = [...CLI.values()].filter(c => String(c.cod) === q || AG.N(c.rs).includes(q)).slice(0, 12);
+  el.innerHTML = L.map(c => `<button class="sm" onclick="verFicha(${c.cod})">${c.cod} · ${esc(c.rs)}</button>`).join('') || '<span class="mut small">Sin resultados</span>';
+}
+
+function vResumen() {
+  const { res } = calcTop(); const cm = calcCM().filter(x => x.cm || x.c.cmChess);
+  const set = new Map(); res.forEach(g => g.rows.forEach(r => set.set(r.cod, 'TOP'))); cm.forEach(x => set.set(x.cod, set.has(x.cod) ? 'TOP+CM' : 'CM'));
+  CLI.forEach(c => { if (c.canal === 'MAY' && TOPES[c.cod]?.tope != null) set.set(c.cod, set.get(c.cod) || 'MAY'); });
+  const por = {};
+  for (const [cod, amb] of set) {
+    const c = CLI.get(cod); if (S.sup && c.sup !== S.sup) continue;
+    const o = por[c.sup] || (por[c.sup] = { n: 0, comp: 0, proc: 0, pend: 0, na: 0, exc: 0, sinTope: 0, L: [] });
+    const p = pdaDe(cod); const st = p ? p.status : 'Pendiente';
+    o.n++; if (st === 'Completo') o.comp++; else if (st === 'En proceso') o.proc++; else if (st === 'No aplica') o.na++; else o.pend++;
+    const t = topeDe(cod); if (t != null && hlM(cod, S.ym) > t && !(AUT[S.ym] && AUT[S.ym][cod])) o.exc++;
+    if (amb.includes('CM') && t == null) o.sinTope++;
+    o.L.push({ cod, c, amb, st, p });
+  }
+  const rows = Object.entries(por).map(([sup, o]) => ({ sup, ...o })).sort((a, b) => a.sup.localeCompare(b.sup));
+  const cols = [{ lab: 'Supervisor', l: true, fn: r => esc(r.sup) }, { lab: 'Clientes', fn: r => r.n }, { lab: 'Completo', fn: r => r.comp }, { lab: 'En proceso', fn: r => r.proc }, { lab: 'Pendiente', fn: r => `<b class="${r.pend ? 'down' : ''}">${r.pend}</b>` }, { lab: 'No aplica', fn: r => r.na }, { lab: '% con PDA', fn: r => fP(div(r.n - r.pend, r.n)) }, { lab: 'CM sin tope', fn: r => r.sinTope }, { lab: 'Excesos sin aut.', fn: r => `<b class="${r.exc ? 'down' : ''}">${r.exc}</b>` }];
+  const det = rows.flatMap(r => r.L).sort((a, b) => a.c.sup.localeCompare(b.c.sup) || a.c.rs.localeCompare(b.c.rs));
+  const colsD = [{ lab: 'Supervisor', l: true, sv: x => x.c.sup, fn: x => esc(x.c.sup) }, { lab: 'Cliente', l: true, cls: 'cli', sv: x => x.c.rs, fn: x => `<span class="lk" onclick="verFicha(${x.cod})">${x.cod}</span> ${esc(x.c.rs)}` }, { lab: 'Canal', l: true, sv: x => x.c.canal, fn: x => esc(x.c.canal) }, { lab: 'Ámbito', l: true, sv: x => x.amb, fn: x => x.amb.split('+').map(a => `<span class="tag ${a === 'CM' ? 't-cm' : 't-top'}">${a}</span>`).join(' ') }, { lab: 'Status', l: true, sv: x => x.st, fn: x => stBadge(x.cod, x.amb.includes('CM') ? 'CM' : x.amb) }, { lab: 'Responsable', l: true, fn: x => esc(x.p?.resp || '') }, { lab: 'Compromiso', fn: x => esc(x.p?.fec || '') }, { lab: 'Último cambio', l: true, fn: x => x.p ? `<span class="small mut">${esc(x.p.por)} ${new Date(x.p.ts).toLocaleDateString('es-AR')}</span>` : '' }];
+  const P = P_(); CTX = {}; res.forEach(g => g.rows.forEach(r => { CTX[r.cod] = r; })); det.forEach(x => { if (!CTX[x.cod]) CTX[x.cod] = filaCliente(x.c, P); });
+  $('main').innerHTML = `<div class="card"><h2>Avance de planes de acción — ${MESES[S.ym % 100 - 1]} ${Math.floor(S.ym / 100)}</h2><div class="hint">Clientes TOP de cada canal + clientes con comportamiento mayorista + mayoristas con tope.</div>${tabla('tRes', cols, rows)}</div>
+  <div class="card"><h2>Detalle</h2>${tabla('tResD', colsD, det, { h: '60vh' })}</div>`;
+}
+
+// ---------- Ajustes (admin) ----------
+function vAjustes() {
+  if (!ADMIN) { $('main').innerHTML = ''; return; }
+  const subs = DATA ? [...new Set([...CLI.values()].map(c => c.sub).filter(Boolean))].sort() : [];
+  const vens = DATA ? [...new Map([...CLI.values()].filter(c => c.ven).map(c => [c.ven, c.venN])).entries()].sort((a, b) => a[0] - b[0]) : [];
+  const marcas = DATA ? [...new Set([...ART.values()].filter(a => a.u === 'CZA').map(a => a.m))].sort() : [];
+  const cals = DATA ? [...new Set([...ART.values()].filter(a => a.u === 'CZA').map(a => a.c))].sort() : [];
+  $('main').innerHTML = `<div class="card"><h2>Parámetros</h2><div class="fl">
+   <span>Top N por canal</span><input id="cTop" type="number" value="${CFG.topN}" style="width:90px">
+   <span>Factor CM (veces el promedio del subcanal)</span><input id="cFac" type="number" step="0.5" value="${CFG.factorCM}" style="width:90px">
+   <span>Tope general mayoristas (HL/mes)</span><input id="cTopeMay" type="number" value="${CFG.topeMay}" style="width:90px">
+   <span>Alerta desde (% del tope)</span><input id="cAl" type="number" value="${(CFG.alerta || 0.8) * 100}" style="width:90px">
+   <span>Mix mayorista máximo (%)</span><input id="cMix" type="number" step="0.5" value="${CFG.mixMay * 100}" style="width:90px">
+   <span>Score de ejecución bajo (&lt;)</span><input id="cSc" type="number" value="${CFG.scoreBajo}" style="width:90px">
+   <span>SOM bajo (&lt; %)</span><input id="cSom" type="number" value="${CFG.somBajo * 100}" style="width:90px">
+   <span>Logo (imagen)</span><div class="row"><input type="file" accept="image/*" id="cLogo"> ${CFG.logo ? '<img src="' + CFG.logo + '" style="height:30px"> <button class="sm" onclick="CFG.logo=\'\';guardarCfg()">quitar</button>' : ''}</div>
+   <span>Cambiar PIN admin</span><div class="row"><input id="cPin" type="password" style="width:120px"> <button class="sm" onclick="cambiarPin()">Cambiar</button></div>
+  </div><button class="pri" onclick="guardarParams()">Guardar parámetros</button> <span id="cMsg" class="msg"></span></div>
+  <div class="grid2"><div class="card"><h2>Subcanal → canal</h2><div class="hint">Por defecto, las mismas reglas del Censo Thomas. Cambiá solo lo que haga falta.</div>${tabla('tSub', [{ lab: 'Subcanal', l: true, fn: s => esc(s) }, { lab: 'Canal', l: true, fn: s => `<select onchange="setMap('sub',${esc(JSON.stringify(s))},this.value)">${['K+T', 'AS', 'REF', 'MAY', 'OTROS', 'REVISAR'].map(k => opt(k, k + (k === canalRegla(s) ? ' (regla)' : ''), canalDe(s))).join('')}</select>` }], subs, { h: '50vh' })}</div>
+  <div class="card"><h2>Vendedor → supervisor</h2>${tabla('tVen', [{ lab: 'Vendedor', l: true, fn: v => v[0] + ' - ' + esc(v[1]) }, { lab: 'Supervisor', l: true, fn: v => `<select onchange="setMap('ven','${v[0]}',this.value)">${[...SUPS, 'SIN SUPERVISOR'].map(k => opt(k, k, supDe(v[0]))).join('')}</select>` }], vens, { h: '50vh' })}</div></div>
+  <div class="grid2"><div class="card"><h2>Marcas (CZA): grupo y Above Core</h2>${tabla('tMar', [{ lab: 'Marca', l: true, fn: m => esc(m) }, { lab: 'Grupo', l: true, fn: m => `<input value="${esc(grupoDe(m))}" onchange="setMap('grupo',${esc(JSON.stringify(m))},this.value.toUpperCase())" style="width:170px">` }, { lab: 'Above Core', fn: m => `<input type="checkbox" ${esAbove(m) ? 'checked' : ''} onchange="setMap('above',${esc(JSON.stringify(m))},this.checked)">` }], marcas, { h: '50vh' })}</div>
+  <div class="card"><h2>Calibres M1/M2 (litro y lata 473)</h2>${tabla('tCal', [{ lab: 'Calibre', l: true, fn: m => esc(m) }, { lab: 'Cuenta como M1/M2', fn: m => `<input type="checkbox" ${esM1M2(m) ? 'checked' : ''} onchange="setMap('m1m2',${esc(JSON.stringify(m))},this.checked)">` }], cals, { h: '50vh' })}</div></div>`;
+  $('cLogo').onchange = e => { const f = e.target.files[0]; if (!f) return; const rd = new FileReader(); rd.onload = () => { const img = new Image(); img.onload = () => { const cv = document.createElement('canvas'); const k = 80 / img.height; cv.width = Math.round(img.width * k); cv.height = 80; cv.getContext('2d').drawImage(img, 0, 0, cv.width, cv.height); CFG.logo = cv.toDataURL('image/png'); guardarCfg(); }; img.src = rd.result; }; rd.readAsDataURL(f); };
+}
+async function setMap(k, key, v) { CFG[k] = CFG[k] || {}; CFG[k][key] = v; await guardarCfg(); }
+async function guardarParams() { CFG.topeMay = +$('cTopeMay').value || 0; CFG.alerta = (+$('cAl').value || 80) / 100; CFG.topN = +$('cTop').value || 5; CFG.factorCM = +$('cFac').value || 6; CFG.mixMay = (+$('cMix').value || 25) / 100; CFG.scoreBajo = +$('cSc').value || 70; CFG.somBajo = (+$('cSom').value || 70) / 100; await guardarCfg(); $('cMsg').innerHTML = '<b class="up">Guardado</b>'; }
+async function guardarCfg() { await ref('cfg').set(JSON.stringify(CFG)); }
+async function cambiarPin() { const p = $('cPin').value; if (p.length < 4) { alert('Mínimo 4 caracteres'); return; } await ref('admin/pin').set(await sha(p)); lsSet('gx_pin', await sha(p)); alert('PIN cambiado'); }
+
+// =====================================================================
+//  Carga de datos desde la carpeta del Power BI (admin)
+// =====================================================================
+let DIR = null, FILES = [], SEL = {}, TIPOSEL = {};
+function vCarga() {
+  if (!ADMIN) { $('main').innerHTML = ''; return; }
+  const soporta = 'showDirectoryPicker' in window;
+  const cols = [
+    { lab: 'Usar', fn: f => `<input type="checkbox" ${SEL[f.path] ? 'checked' : ''} onchange="SEL['${esc(f.path)}']=this.checked;guardarSel()">` },
+    { lab: 'Archivo', l: true, fn: f => esc(f.path) },
+    { lab: 'Tipo', l: true, fn: f => `<select onchange="TIPOSEL['${esc(f.path)}']=this.value;guardarSel();render()">${opt('', f.det ? '' : '— no reconocido —', TIPOSEL[f.path] ?? f.det ?? '')}${Object.entries(AG.TIPOS).map(([k, t]) => opt(k, t.lab + (k === f.det ? ' (detectado)' : ''), TIPOSEL[f.path] ?? f.det ?? '')).join('')}</select>` },
+    { lab: 'Tamaño', fn: f => nf1.format(f.size / 1048576) + ' MB' },
+    { lab: 'Modificado', fn: f => new Date(f.mod).toLocaleString('es-AR', { dateStyle: 'short', timeStyle: 'short' }) },
+    { lab: 'Estado', l: true, fn: f => f.est || '' },
+  ];
+  $('main').innerHTML = `<div class="card"><h2>Cargar datos desde la carpeta del Power BI</h2>
+  <div class="hint">La primera vez elegí la carpeta donde guardás las bases del Power BI. Después solo tocás <b>Actualizar</b>: lee los archivos marcados, los resume y los publica para todos. Los archivos que no cambiaron se toman del caché, así que solo se vuelve a leer la Base del mes.</div>
+  <div class="row">${soporta ? (DIR ? `<button class="pri" onclick="actualizar()">⟳ Actualizar y publicar</button> <button onclick="listarCarpeta(true)">Ver archivos de la carpeta</button> <button onclick="elegirCarpeta()">Cambiar carpeta</button> <span class="mut">Carpeta: <b>${esc(DIR.name)}</b></span>` : `<button class="pri" onclick="elegirCarpeta()">Elegir carpeta</button>`) : `<span class="mut">Este navegador no permite elegir carpetas (usá Chrome o Edge). Podés cargar los archivos a mano:</span>`}
+  <label class="row" style="margin-left:auto"><span class="mut small">o archivos sueltos</span><input type="file" multiple accept=".xlsx,.csv" onchange="archivosSueltos(this.files)"></label></div>
+  ${FILES.length ? `<div style="margin-top:12px">${tabla('tFiles', cols, FILES, { h: '50vh' })}</div>
+  <div class="row" style="margin-top:12px"><button class="pri" id="btnPub" onclick="procesarYPublicar()">Actualizar y publicar</button><span class="mut small">Marcados: ${FILES.filter(f => SEL[f.path]).length}. Tienen que estar: Venta (todas las Base del año actual y del anterior), Clientes, WAPI, Activos fijos y Estándar de ejecución.</span></div>` : ''}
+  <div id="pubMsg" class="msg"></div><div class="prog"><i id="pubBar"></i></div></div>
+  <div class="card"><h2>Lo publicado</h2><div class="hint">${META ? (META.archivos || []).map(a => `${esc(a.n)} <span class="mut">(${esc(AG.TIPOS[a.t]?.lab || a.t)})</span>`).join(' · ') : 'Nada todavía.'}</div></div>`;
+}
+async function elegirCarpeta() {
+  try { DIR = await window.showDirectoryPicker({ id: 'galaxia-pbi', mode: 'read' }); await IDB.set('dir', DIR); await listarCarpeta(true); }
+  catch (e) { if (e.name !== 'AbortError') alert(e.message); }
+}
+async function permiso(h) { if (!h) return false; if ((await h.queryPermission({ mode: 'read' })) === 'granted') return true; return (await h.requestPermission({ mode: 'read' })) === 'granted'; }
+async function listarCarpeta(detectar) {
+  if (!DIR || !(await permiso(DIR))) return false;
+  const out = [];
+  async function rec(d, pre, depth) {
+    for await (const [name, h] of d.entries()) {
+      if (h.kind === 'directory') { if (depth < 2 && !name.startsWith('.')) await rec(h, pre + name + '/', depth + 1); continue; }
+      if (!/\.(xlsx|xlsm|csv)$/i.test(name) || name.startsWith('~$')) continue;
+      const f = await h.getFile(); out.push({ path: pre + name, name, h, size: f.size, mod: f.lastModified });
+    }
+  }
+  if ($('pubMsg')) $('pubMsg').textContent = 'Leyendo carpeta…';
+  await rec(DIR, '', 0);
+  out.sort((a, b) => a.path.localeCompare(b.path));
+  FILES = out; await detectarTipos(); if (detectar !== false) render();
+  return true;
+}
+async function actualizar() {
+  if (DIR) { if (!(await listarCarpeta(false))) return; render(); }
+  await procesarYPublicar();
+}
+async function archivosSueltos(fl) {
+  FILES = [...fl].map(f => ({ path: f.name, name: f.name, file: f, size: f.size, mod: f.lastModified }));
+  FILES.forEach(f => { if (SEL[f.path] === undefined) SEL[f.path] = true; });
+  await detectarTipos(); render();
+}
+async function detectarTipos() {
+  const cache = (await IDB.get('det')) || {};
+  for (const f of FILES) {
+    const k = f.path + '|' + f.size + '|' + f.mod;
+    if (cache[k] !== undefined) f.det = cache[k];
+    else { try { const file = f.file || await f.h.getFile(); f.det = AG.detectar(await RD.encabezado(file, f.name)); } catch (e) { f.det = null; f.est = 'no se pudo leer'; } cache[k] = f.det; }
+    if (SEL[f.path] === undefined) SEL[f.path] = !!f.det;
+  }
+  await IDB.set('det', cache); await guardarSel();
+}
+async function guardarSel() { await IDB.set('sel', { SEL, TIPOSEL }); }
+async function procesarYPublicar() {
+  const msg = $('pubMsg'), bar = $('pubBar'); $('btnPub').disabled = true;
+  try {
+    const usar = FILES.filter(f => SEL[f.path] && (TIPOSEL[f.path] ?? f.det));
+    if (!usar.length) throw new Error('No hay archivos marcados con tipo.');
+    const cache = (await IDB.get('res')) || {}; const R = [];
+    let i = 0;
+    for (const f of usar) {
+      const tipo = TIPOSEL[f.path] ?? f.det; const k = f.path + '|' + f.size + '|' + f.mod + '|' + tipo + '|' + AGG_VER;
+      bar.style.width = (i++ / usar.length * 80) + '%';
+      if (cache[k]) { f.est = 'del caché'; R.push({ ...cache[k], n: f.path, mod: f.mod }); continue; }
+      msg.textContent = `Leyendo ${f.path}…`; await new Promise(r => setTimeout(r, 30));
+      const t0 = Date.now(); const file = f.file || await f.h.getFile();
+      const r = await AG.procesar(file, f.name, tipo); cache[k] = r; f.est = `leído (${Math.round((Date.now() - t0) / 1000)} s)`;
+      R.push({ ...r, n: f.path, mod: f.mod });
+    }
+    // limpiar caché de archivos viejos
+    const vivos = new Set(usar.map(f => f.path + '|' + f.size + '|' + f.mod + '|' + (TIPOSEL[f.path] ?? f.det) + '|' + AGG_VER));
+    for (const k in cache) if (!vivos.has(k)) delete cache[k];
+    await IDB.set('res', cache);
+    msg.textContent = 'Armando el resumen…'; bar.style.width = '85%';
+    const { data, meta } = unir(R);
+    if (!data.v.length) throw new Error('No hay venta: marcá al menos una Base.');
+    if (!data.cli.length) throw new Error('Falta la base de Clientes.');
+    const js = JSON.stringify(data);
+    const z = b64(await gz(js));
+    meta.ver = 'v' + Date.now(); meta.ts = Date.now(); meta.por = USER || 'ADMIN'; meta.kb = Math.round(z.length / 1024);
+    msg.textContent = `Publicando ${nf0.format(z.length / 1024)} KB…`; bar.style.width = '92%';
+    await ref('data').set(partir(z)); await ref('meta').set(meta);
+    await IDB.set('data', { ver: meta.ver, data });
+    META = meta; DATA = data; preparar(); bar.style.width = '100%';
+    msg.innerHTML = `<b class="up">Listo.</b> Venta ${ymdLab(meta.venta.desde)} a ${ymdLab(meta.venta.hasta)} (${MESES_DATA.length} meses), ${nf0.format(data.cli.length)} clientes, WAPI ${meta.wapi ? ymLab(Math.floor(meta.wapi.desde / 100)) + ' a ' + ymLab(Math.floor(meta.wapi.hasta / 100)) : 'sin cargar'}. ${meta.avisos.length ? '<br>⚠ ' + meta.avisos.map(esc).join('<br>⚠ ') : ''}`;
+    renderFresh(); $('nav') && render(); $('pubMsg').innerHTML = msg.innerHTML;
+  } catch (e) { console.error(e); msg.innerHTML = `<b class="down">Error: ${esc(e.message)}</b>`; }
+  finally { const b = $('btnPub'); if (b) b.disabled = false; }
+}
+// une los resúmenes de cada archivo: para cada mes de venta / WAPI usa un solo archivo (el más nuevo)
+function unir(R) {
+  const avisos = [];
+  const pickMes = (tipo) => {
+    const own = new Map();
+    for (const r of R.filter(x => x.tipo === tipo)) { const ms = new Set(r.f.map(x => x[0])); for (const m of ms) { const o = own.get(m); if (!o || r.hasta > o.hasta || (r.hasta === o.hasta && r.mod > o.mod)) { if (o) avisos.push(`${ymLab(m)} está en "${o.n}" y en "${r.n}": uso "${r.n}".`); own.set(m, r); } else avisos.push(`${ymLab(m)} está en "${o.n}" y en "${r.n}": uso "${o.n}".`); } }
+    return own;
+  };
+  const art = {}; const v = [];
+  const ownV = pickMes('venta');
+  for (const r of R.filter(x => x.tipo === 'venta')) { Object.assign(art, r.art); for (const x of r.f) if (ownV.get(x[0]) === r) v.push([x[0], x[1], x[2], x[3]]); }
+  const ownW = pickMes('wapi'); const w = [];
+  for (const r of R.filter(x => x.tipo === 'wapi')) for (const x of r.f) if (ownW.get(x[0]) === r) w.push(x);
+  const last = t => R.filter(x => x.tipo === t).sort((a, b) => b.mod - a.mod)[0];
+  const cl = last('clientes'), ac = last('activos');
+  if (R.filter(x => x.tipo === 'clientes').length > 1) avisos.push('Hay más de una base de Clientes: uso la más nueva (' + cl.n + ').');
+  const est = []; const seen = new Set();
+  for (const r of R.filter(x => x.tipo === 'estandar')) for (const x of r.L) { const k = x[0] + '|' + x[1] + '|' + x[2]; if (!seen.has(k)) { seen.add(k); est.push(x); } }
+  const rng = t => { const rs = R.filter(x => x.tipo === t && x.hasta); if (!rs.length) return null; return { desde: Math.min(...rs.map(x => x.desde || x.hasta)), hasta: Math.max(...rs.map(x => x.hasta)) }; };
+  const ymdOf = ms => { const d = new Date(ms); return d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate(); };
+  // meses faltantes
+  const ms = [...ownV.keys()].sort((a, b) => a - b);
+  if (ms.length) for (let m = ms[0]; m < ms[ms.length - 1]; m = ymAdd(m, 1)) if (!ownV.has(m)) avisos.push(`Falta la venta de ${ymLab(m)}.`);
+  const meta = {
+    venta: rng('venta'), wapi: rng('wapi'), estandar: rng('estandar'),
+    clientes: cl ? { mod: ymdOf(cl.mod), n: cl.n } : null, activos: ac ? { mod: ymdOf(ac.mod), hasta: ac.hasta, n: ac.n } : null,
+    archivos: R.map(r => ({ n: r.n, t: r.tipo })), avisos
+  };
+  if (!rng('wapi')) avisos.push('No marcaste ningún WAPI: el Trade Spend va a quedar vacío.');
+  if (!ac) avisos.push('Falta Activos fijos: EDF vacío.');
+  if (!est.length) avisos.push('Falta Estándar de ejecución.');
+  return { data: { art, v, w, cli: cl ? cl.L : [], edf: ac ? ac.agg : {}, est }, meta };
+}
+
+// =====================================================================
+//  Arranque
+// =====================================================================
+async function loginAdmin() {
+  const pin = await fbGet('admin/pin');
+  if (pin && lsGet('gx_pin') === pin) return true;
+  const p = prompt(pin ? 'PIN de administrador:' : 'Creá un PIN de administrador (mínimo 4 caracteres):'); if (!p) return false;
+  const h = await sha(p);
+  if (!pin) { if (p.length < 4) { alert('Muy corto'); return false; } await ref('admin/pin').set(h); lsSet('gx_pin', h); return true; }
+  if (h === pin) { lsSet('gx_pin', h); return true; }
+  alert('PIN incorrecto'); return false;
+}
+async function cargarDatos() {
+  const meta = await fbGet('meta'); META = meta;
+  if (!meta) return;
+  const loc = await IDB.get('data');
+  if (loc && loc.ver === meta.ver) { DATA = loc.data; return; }
+  $('boot') && ($('boot').firstChild.textContent = `Descargando datos (${nf0.format(meta.kb || 0)} KB)…`);
+  const raw = await fbGet('data');
+  DATA = JSON.parse(await gunz(unb64(juntar(raw))));
+  await IDB.set('data', { ver: meta.ver, data: DATA });
+}
+async function boot() {
+  try {
+    await fbInit(); $('bootBar').style.width = '20%';
+    if (ADMIN && !(await loginAdmin())) { location.hash = ''; location.reload(); return; }
+    const cfg = await fbGet('cfg'); if (cfg) CFG = Object.assign(JSON.parse(JSON.stringify(CFG_DEF)), typeof cfg === 'string' ? JSON.parse(cfg) : cfg);
+    $('bootBar').style.width = '35%';
+    await cargarDatos(); $('bootBar').style.width = '80%';
+    if (DATA) preparar();
+    const s = await IDB.get('sel'); if (s) { SEL = s.SEL || {}; TIPOSEL = s.TIPOSEL || {}; }
+    if (ADMIN) { DIR = await IDB.get('dir') || null; }
+    S.tab = DATA ? 'top' : (ADMIN ? 'carga' : 'info');
+    render();
+    if (!USER) pedirUsuario();
+    // en vivo: PDA, topes, autorizaciones, configuración, publicación nueva
+    ref('pda').on('value', s => { PDA = s.val() || {}; if (DATA && !$('dlg').open) render(); });
+    ref('topes').on('value', s => { TOPES = s.val() || {}; if (DATA && !$('dlg').open) render(); });
+    ref('aut').on('value', s => { AUT = s.val() || {}; if (DATA && !$('dlg').open) render(); });
+    ref('cfg').on('value', s => { const v = s.val(); if (!v) return; const n = Object.assign(JSON.parse(JSON.stringify(CFG_DEF)), typeof v === 'string' ? JSON.parse(v) : v); const re = JSON.stringify(n.sub) !== JSON.stringify(CFG.sub) || JSON.stringify(n.ven) !== JSON.stringify(CFG.ven) || JSON.stringify(n.grupo) !== JSON.stringify(CFG.grupo); CFG = n; if (DATA && re) preparar(); if (!$('dlg').open) render(); });
+    ref('meta/ver').on('value', s => { const v = s.val(); if (META && v && v !== META.ver && !ADMIN) { const b = document.createElement('div'); b.className = 'err'; b.style.background = '#7a4a10'; b.innerHTML = 'Hay datos nuevos publicados. <button onclick="location.reload()">Actualizar</button>'; document.body.insertBefore(b, $('nav')); } });
+    CENSO = await cargarCenso(); renderFresh(); if (DATA && ['top', 'cm', 'ficha'].includes(S.tab) && !$('dlg').open) render();
+  } catch (e) {
+    console.error(e); $('main').innerHTML = `<div class="err">No se pudo iniciar: ${esc(e.message || e)} — mandale una captura a Ivo.</div>`;
+  }
+}
+$('dlg').addEventListener('close', () => { if (DATA) render(); });
+window.addEventListener('hashchange', () => location.reload());
+boot();
+
+</script>
+</body>
+</html>
