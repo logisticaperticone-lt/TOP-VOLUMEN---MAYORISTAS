@@ -486,9 +486,9 @@ const grupoDef = m => { const s = AG.N(m); for (const [k, g] of MARCA_GRUPOS) if
 const ABOVE_DEF = /^(ANDES ORIGEN|STELLA|CORONA|PATAGONIA|MICHELOB|GOOSE|BUDWEISER)/;
 const M1M2_DEF = /^(1000 CC VIDRIO|975 CC VIDRIO|473)/;
 const LOGO_DEF = 'data:image/png;base64,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';
-const CFG_DEF = { topeMay: 450, alerta: 0.8, topN: 5, factorCM: 6, mixMay: 0.25, scoreBajo: 70, somBajo: 0.7, tsTol: 0, mesesStock: 0, sub: {}, ven: {}, grupo: {}, above: {}, m1m2: {}, logo: '' };
+const CFG_DEF = { pesos: [0.4, 0.3, 0.3], corte: 0.5, topeMay: 450, alerta: 0.8, topN: 5, factorCM: 6, mixMay: 0.25, scoreBajo: 70, somBajo: 0.7, tsTol: 0, mesesStock: 0, sub: {}, ven: {}, grupo: {}, above: {}, m1m2: {}, logo: '' };
 let CFG = JSON.parse(JSON.stringify(CFG_DEF));
-let PDA = {}, TOPES = {}, AUT = {}, META = null;
+let PDA = {}, TOPES = {}, AUT = {}, NOTAS = {}, META = null;
 // Tope efectivo: el propio del cliente (excepción) o, si es mayorista, el tope general del canal
 const TOPE_EXC_DEF = { 332898: 150, 911416: 150 }; // Guerrero: excepción inicial, se cambia desde el tope del cliente
 function topeInfo(cod) {
@@ -634,7 +634,7 @@ function potencial(rows, universo) {
   };
   const U = universo.map(comp);
   const pct = (v, j) => { if (v == null) return null; const xs = U.map(x => x[j]).filter(x => x != null); if (!xs.length) return null; let lo = 0; for (const x of xs) if (x < v) lo++; return lo / Math.max(1, xs.length - 1); };
-  const W = [0.4, 0.3, 0.3];
+  const W = CFG.pesos && CFG.pesos.length === 3 ? CFG.pesos : [0.4, 0.3, 0.3];
   for (const r of rows) {
     const c = comp(r); let s = 0, w = 0; r.potC = c;
     c.forEach((v, j) => { const p = pct(v, j); if (p != null) { s += Math.min(1, p) * W[j]; w += W[j]; } });
@@ -643,7 +643,7 @@ function potencial(rows, universo) {
 }
 function diagnostico(r, tsCanal) {
   const tsAlto = r.tsU3 != null && tsCanal != null ? r.tsU3 > tsCanal * (1 + (CFG.tsTol || 0)) : null;
-  const potAlto = r.pot != null ? r.pot >= 0.5 : null;
+  const potAlto = r.pot != null ? r.pot >= (CFG.corte ?? 0.5) : null;
   let q = 0;
   if (tsAlto != null && potAlto != null) q = tsAlto ? (potAlto ? 2 : 1) : (potAlto ? 3 : 4);
   else if (potAlto != null) q = potAlto ? 3 : 4;
@@ -867,27 +867,72 @@ function celdaTope(cod, ym) {
 // =====================================================================
 //  Vistas
 // =====================================================================
+function linkify(t) { return esc(t).replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" style="color:var(--acc2)">$1</a>').replace(/\n/g, '<br>'); }
+function vNotas() {
+  const L = Object.entries(NOTAS).map(([id, n]) => ({ id, ...n })).filter(n => ADMIN || !n.priv).sort((a, b) => (a.ord ?? 0) - (b.ord ?? 0) || a.ts - b.ts);
+  if (!L.length && !ADMIN) return '';
+  return `<div class="card"><h2>Notas del analista</h2><div class="hint">${ADMIN ? 'Instrucciones y avisos para quien use el archivo: de dónde se baja cada base, qué revisar, etc. Las marcadas como "solo admin" no las ven los supervisores.' : 'Indicaciones del analista.'}</div>
+  ${L.map(n => `<div class="box"><div class="row"><b>${esc(n.tit || 'Nota')}</b>${n.priv ? ' <span class="tag t-chess">solo admin</span>' : ''}<span class="mut small" style="margin-left:auto">${esc(n.por || '')} · ${new Date(n.ts).toLocaleDateString('es-AR')}</span>${ADMIN ? ` <button class="sm" onclick="editarNota('${n.id}')">editar</button>` : ''}</div><div style="margin-top:6px">${linkify(n.txt || '')}</div></div>`).join('') || '<div class="mut">Todavía no hay notas.</div>'}
+  ${ADMIN ? '<button class="pri" onclick="editarNota()">+ Nueva nota</button>' : ''}</div>`;
+}
+function editarNota(id) {
+  const n = (id && NOTAS[id]) || {};
+  abrirDlg(id ? 'Editar nota' : 'Nueva nota', `<div class="fl"><span>Título</span><input id="nTit" value="${esc(n.tit || '')}" placeholder="Ej.: De dónde bajar el WAPI">
+  <span>Texto</span><textarea id="nTxt" rows="10" placeholder="Pasos, rutas de carpetas, links… Los links (https://…) quedan clickeables.">${esc(n.txt || '')}</textarea>
+  <span>Orden</span><input id="nOrd" type="number" value="${n.ord ?? 0}" style="width:90px">
+  <span>Visibilidad</span><label class="row"><input id="nPriv" type="checkbox" ${n.priv ? 'checked' : ''}> solo admin (no la ven los supervisores)</label></div>`,
+    `${id ? `<button onclick="borrarNota('${id}')">Borrar</button>` : ''}<button onclick="cerrarDlg()">Cancelar</button><button class="pri" onclick="guardarNota(${id ? `'${id}'` : ''})">Guardar</button>`);
+}
+async function guardarNota(id) {
+  const o = { tit: $('nTit').value.trim(), txt: $('nTxt').value, ord: +$('nOrd').value || 0, priv: $('nPriv').checked, por: USER || 'ADMIN', ts: Date.now() };
+  await ref('notas/' + (id || ('n' + Date.now()))).set(o); cerrarDlg();
+}
+async function borrarNota(id) { if (confirm('¿Borrar la nota?')) { await ref('notas/' + id).remove(); cerrarDlg(); } }
 function vInfo() {
-  const P = DATA ? P_() : null;
-  $('main').innerHTML = `<div class="card info"><h2>Qué controla este archivo</h2>
+  const P = DATA ? P_() : null; const W = CFG.pesos || [0.4, 0.3, 0.3]; const pc = x => nf0.format(x * 100) + ' %';
+  $('main').innerHTML = vNotas() + `<div class="card info"><h2>Qué controla este archivo</h2>
   <h3>2.4.1.3 · Clientes TOP por volumen (120 pts)</h3>
-  <p>Todos los meses, por canal, el TOP ${CFG.topN} de clientes de CZA y UNG según el volumen acumulado del año (YTD). Para cada cliente: R3 (últimos 3 meses) y MMAA (mismo mes del año anterior) con su peso sobre el canal y sobre el total, Trade Spend sobre facturación y su evolución, brand distribution, cantidad de EDF, score de estándar de ejecución, SOM del último Censo Thomas y el plan de acción con tope de volumen.</p>
+  <p>Todos los meses, por canal, el TOP ${CFG.topN} de clientes de CZA y UNG según el volumen acumulado del año (YTD). Para cada cliente: R3 (últimos 3 meses) y MMAA (mismo mes del año anterior) con su peso sobre el canal y sobre el total, Trade Spend sobre la facturación y su evolución, brand distribution, cantidad de EDF, score de estándar de ejecución, SOM del último Censo Thomas y el plan de acción con tope de volumen.</p>
   <h3>2.4.1.6 · Gestión del canal mayorista (70 pts)</h3>
-  <ul><li><b>Canal mayorista:</b> estrategia de la región (mix mayorista menor al ${fP(CFG.mixMay)} y máximos permitidos por cliente), su evolución mes a mes y qué mayorista genera desvíos, a nivel PDV.</li>
+  <ul><li><b>Canal mayorista:</b> estrategia de la región (mix mayorista menor al ${fP(CFG.mixMay)} y máximo de ${nf1.format(CFG.topeMay)} HL/mes por mayorista, con excepciones por cliente), su evolución mes a mes y qué mayorista genera desvíos, a nivel PDV.</li>
   <li><b>Comportamiento mayorista (CM):</b> clientes que sin ser mayoristas tienen dinámica de mayorista. Regla: venta YTD mayor a ${CFG.factorCM} veces el promedio de su subcanal. Además se muestran las señales que pide el manual (mix de litro y lata 473, mix UNG, mix Above Core, EDF, descuentos y SKUs).</li>
   <li><b>Nivel 2 (100 %):</b> cada cliente CM con <b>tope de volumen</b>, control mes a mes y, cuando se supera, la <b>autorización del gerente de CMQ</b> registrada.</li></ul>
   <h3>Cómo se usa</h3>
-  <ul><li>Elegí el <b>mes</b> arriba: todo se calcula a ese mes (AM), con LY = mismo mes del año anterior, YTD = enero a ese mes, U3M = últimos 3 meses.</li>
-  <li>El status de cada cliente abre su <b>plan de acción</b>: trae un diagnóstico automático (TS del cliente vs su canal × potencial) y un PDA sugerido que se edita. Queda guardado por mes con quién lo cargó.</li>
-  <li>Topes: los mayoristas usan el tope general (${nf1.format(CFG.topeMay)} HL/mes) salvo que tengan uno propio (excepción). ${LEY()} Clic en la celda roja para registrar la autorización.</li>
-  <li>La barra de "Datos" muestra hasta qué fecha está cada base: verde al día, amarillo atrasada, rojo vieja.</li></ul>
-  <h3>Diagnóstico y potencial</h3>
-  <p><b>TS alto</b> = TS U3M del cliente mayor al TS U3M de su canal. <b>Potencial</b> (0-100) = percentil dentro del canal de: crecimiento del volumen U3M vs mismo período del año anterior (40 %), evolución del surtido vs año anterior (30 %) y espacio de share según el censo (30 %). Alto ≥ 50.</p>
-  <p class="mut small">Cuadrantes: <span class="q q1">Sobreinvertido</span> TS alto · potencial bajo · <span class="q q2">Invertir con tope</span> TS alto · potencial alto · <span class="q q3">Capturar volumen</span> TS bajo · potencial alto · <span class="q q4">Sostener</span> TS bajo · potencial bajo.</p>
+  <ul><li>Elegí el <b>mes</b> arriba: todo se calcula a ese mes (AM), con LY = mismo mes del año anterior, YTD = enero a ese mes y U3M = últimos 3 meses.</li>
+  <li>Los filtros de <b>negocio, marca y calibre</b> cambian todos los volúmenes. El brand distribution (BD) es la cantidad de artículos distintos que compró el cliente dentro de lo filtrado.</li>
+  <li>El status de cada cliente abre su <b>plan de acción</b> (ver abajo).</li>
+  <li>Topes: ${LEY()} Clic en la celda roja para registrar la autorización.</li>
+  <li>La barra de "Datos" muestra hasta qué fecha está cada base: verde al día, amarillo atrasada, rojo vieja.</li></ul></div>
+
+  <div class="card info"><h2>El diagnóstico: TS × Potencial</h2>
+  <p>A cada cliente la herramienta le hace dos preguntas.</p>
+  <h3>1. ¿Le estamos poniendo mucha plata?</h3>
+  <p>Compara el <b>TS de los últimos 3 meses</b> del cliente (descuento $ sobre la facturación fila real, del WAPI) contra el TS de <b>todo su canal</b> en esos mismos meses. Si está por encima del canal es <b>TS alto</b>; si está por debajo, <b>TS bajo</b>.</p>
+  <h3>2. ¿Tiene recorrido para crecer? (Potencial, de 0 a 100)</h3>
+  <table style="max-width:820px"><thead><tr><th class="l">Componente</th><th class="l">Qué mide</th><th>Peso</th></tr></thead><tbody>
+  <tr><td class="l">Momentum de volumen</td><td class="l">HL de los últimos 3 meses vs los mismos 3 meses del año anterior</td><td>${pc(W[0])}</td></tr>
+  <tr><td class="l">Tendencia de surtido</td><td class="l">Artículos que compra hoy (BD) vs el mismo mes del año anterior</td><td>${pc(W[1])}</td></tr>
+  <tr><td class="l">Espacio de share</td><td class="l">Cuánto le falta para el 100 % de SOM según el último censo</td><td>${pc(W[2])}</td></tr></tbody></table>
+  <p>Ninguno se mira en valor absoluto: cada cliente se ordena contra los 60 más grandes de su canal (percentil), así un almacén no se compara con un autoservicio. Si un dato falta (por ejemplo, un cliente sin censo), ese componente se saca y se reparten los pesos entre los otros. <b>Potencial alto</b> = ${nf0.format((CFG.corte ?? 0.5) * 100)} o más.</p>
+  <h3>Los cuatro cuadrantes</h3>
+  <table style="max-width:820px"><thead><tr><th class="l"></th><th class="l">Potencial bajo</th><th class="l">Potencial alto</th></tr></thead><tbody>
+  <tr><td class="l"><b>TS alto</b></td><td class="l" style="white-space:normal"><span class="q q1">Sobreinvertido</span><br>Se le pone plata y no crece. Bajar el descuento y ponerle tope.</td><td class="l" style="white-space:normal"><span class="q q2">Invertir con tope</span><br>La plata está traccionando volumen. Mantener, pero con tope y revisión mensual.</td></tr>
+  <tr><td class="l"><b>TS bajo</b></td><td class="l" style="white-space:normal"><span class="q q4">Sostener</span><br>Estable, sin sobreinversión. Solo seguimiento.</td><td class="l" style="white-space:normal"><span class="q q3">Capturar volumen</span><br>Crece con poca plata: sumar surtido, una acción o un equipo de frío.</td></tr></tbody></table>
+  <p>Es lo que pide el manual en 2.4.1.3: desconcentrar el Trade Spend y llevarlo a clientes con potencial de crecimiento.</p></div>
+
+  <div class="card info"><h2>El plan de acción (PDA)</h2>
+  <p>Al tocar el status de un cliente se abre su ficha, que trae:</p>
+  <ol><li><b>El diagnóstico</b> con sus números: TS del cliente y del canal, potencial, HL, BD, EDF, score y SOM.</li>
+  <li><b>Un PDA sugerido</b>: texto armado según el cuadrante y con los datos del cliente. Además suma frases automáticas si el score de ejecución está bajo (menos de ${CFG.scoreBajo}), si tiene EDF que no repagan, si el SOM está bajo (menos de ${fP(CFG.somBajo)}) o si es cliente con comportamiento mayorista (tope y autorización del gerente de CMQ).</li>
+  <li><b>El PDA del mes anterior</b>, si existe, para ver qué se había comprometido.</li></ol>
+  <p>El botón <b>"Usar sugerido"</b> copia ese texto al campo del plan; a partir de ahí se edita: el sugerido es un punto de partida, no el plan final. Se completa el <b>tope de volumen</b>, el <b>status</b> (En proceso / Completo / No aplica), el <b>responsable</b>, la <b>fecha de compromiso</b> y el <b>seguimiento</b>.</p>
+  <p>Se guarda <b>por mes y por cliente</b>, con quién lo cargó y cuándo. Cada mes arranca en "Pendiente", pero el plan anterior queda a la vista y todo el historial aparece en la <b>Ficha cliente</b>. En <b>Resumen PDA</b> se ve, por supervisor, cuántos están completos, en proceso o pendientes.</p>
+  <h3>Para tener en cuenta</h3>
+  <ul><li>Sin la venta del año anterior cargada, el potencial queda incompleto: el momentum y la comparación de surtido no se pueden calcular.</li>
+  <li>Los pesos y el corte del potencial son un punto de partida: conviene revisar con los supervisores si los clientes que dan "Capturar volumen" o "Sobreinvertido" tienen sentido, y ajustarlos.</li></ul>
   ${P ? `<p class="mut small">Meses con venta cargada: ${MESES_DATA.map(ymLab).join(', ')}. Meses con WAPI: ${wapiMeses().map(ymLab).join(', ') || '–'}.</p>` : ''}
   </div>`;
 }
-
 function vTop() {
   const { res, totNeg, P } = calcTop(); CTX = {};
   const lyOk = tieneTodos(P.ly), wOk = wapiMeses().includes(S.ym);
@@ -1133,6 +1178,8 @@ function vAjustes() {
    <span>Factor CM (veces el promedio del subcanal)</span><input id="cFac" type="number" step="0.5" value="${CFG.factorCM}" style="width:90px">
    <span>Tope general mayoristas (HL/mes)</span><input id="cTopeMay" type="number" value="${CFG.topeMay}" style="width:90px">
    <span>Alerta desde (% del tope)</span><input id="cAl" type="number" value="${(CFG.alerta || 0.8) * 100}" style="width:90px">
+   <span>Pesos del potencial (%)</span><div class="row"><span class="mut small">volumen</span><input id="cW0" type="number" value="${(CFG.pesos || [0.4, 0.3, 0.3])[0] * 100}" style="width:70px"><span class="mut small">surtido</span><input id="cW1" type="number" value="${(CFG.pesos || [0.4, 0.3, 0.3])[1] * 100}" style="width:70px"><span class="mut small">share</span><input id="cW2" type="number" value="${(CFG.pesos || [0.4, 0.3, 0.3])[2] * 100}" style="width:70px"></div>
+   <span>Potencial alto desde (0-100)</span><input id="cCorte" type="number" value="${(CFG.corte ?? 0.5) * 100}" style="width:90px">
    <span>Mix mayorista máximo (%)</span><input id="cMix" type="number" step="0.5" value="${CFG.mixMay * 100}" style="width:90px">
    <span>Score de ejecución bajo (&lt;)</span><input id="cSc" type="number" value="${CFG.scoreBajo}" style="width:90px">
    <span>SOM bajo (&lt; %)</span><input id="cSom" type="number" value="${CFG.somBajo * 100}" style="width:90px">
@@ -1146,7 +1193,7 @@ function vAjustes() {
   $('cLogo').onchange = e => { const f = e.target.files[0]; if (!f) return; const rd = new FileReader(); rd.onload = () => { const img = new Image(); img.onload = () => { const cv = document.createElement('canvas'); const k = 80 / img.height; cv.width = Math.round(img.width * k); cv.height = 80; cv.getContext('2d').drawImage(img, 0, 0, cv.width, cv.height); CFG.logo = cv.toDataURL('image/png'); guardarCfg(); }; img.src = rd.result; }; rd.readAsDataURL(f); };
 }
 async function setMap(k, key, v) { CFG[k] = CFG[k] || {}; CFG[k][key] = v; await guardarCfg(); }
-async function guardarParams() { CFG.topeMay = +$('cTopeMay').value || 0; CFG.alerta = (+$('cAl').value || 80) / 100; CFG.topN = +$('cTop').value || 5; CFG.factorCM = +$('cFac').value || 6; CFG.mixMay = (+$('cMix').value || 25) / 100; CFG.scoreBajo = +$('cSc').value || 70; CFG.somBajo = (+$('cSom').value || 70) / 100; await guardarCfg(); $('cMsg').innerHTML = '<b class="up">Guardado</b>'; }
+async function guardarParams() { { const w = [+$('cW0').value || 0, +$('cW1').value || 0, +$('cW2').value || 0]; const t = w[0] + w[1] + w[2] || 1; CFG.pesos = w.map(x => x / t); } CFG.corte = (+$('cCorte').value || 50) / 100; CFG.topeMay = +$('cTopeMay').value || 0; CFG.alerta = (+$('cAl').value || 80) / 100; CFG.topN = +$('cTop').value || 5; CFG.factorCM = +$('cFac').value || 6; CFG.mixMay = (+$('cMix').value || 25) / 100; CFG.scoreBajo = +$('cSc').value || 70; CFG.somBajo = (+$('cSom').value || 70) / 100; await guardarCfg(); $('cMsg').innerHTML = '<b class="up">Guardado</b>'; }
 async function guardarCfg() { await ref('cfg').set(JSON.stringify(CFG)); }
 async function cambiarPin() { const p = $('cPin').value; if (p.length < 4) { alert('Mínimo 4 caracteres'); return; } await ref('admin/pin').set(await sha(p)); lsSet('gx_pin', await sha(p)); alert('PIN cambiado'); }
 
@@ -1324,6 +1371,7 @@ async function boot() {
     ref('pda').on('value', s => { PDA = s.val() || {}; if (DATA && !$('dlg').open) render(); });
     ref('topes').on('value', s => { TOPES = s.val() || {}; if (DATA && !$('dlg').open) render(); });
     ref('aut').on('value', s => { AUT = s.val() || {}; if (DATA && !$('dlg').open) render(); });
+    ref('notas').on('value', s => { NOTAS = s.val() || {}; if (S.tab === 'info' && !$('dlg').open) render(); });
     ref('cfg').on('value', s => { const v = s.val(); if (!v) return; const n = Object.assign(JSON.parse(JSON.stringify(CFG_DEF)), typeof v === 'string' ? JSON.parse(v) : v); const re = JSON.stringify(n.sub) !== JSON.stringify(CFG.sub) || JSON.stringify(n.ven) !== JSON.stringify(CFG.ven) || JSON.stringify(n.grupo) !== JSON.stringify(CFG.grupo); CFG = n; if (DATA && re) preparar(); if (!$('dlg').open) render(); });
     ref('meta/ver').on('value', s => { const v = s.val(); if (META && v && v !== META.ver && !ADMIN) { const b = document.createElement('div'); b.className = 'err'; b.style.background = '#7a4a10'; b.innerHTML = 'Hay datos nuevos publicados. <button onclick="location.reload()">Actualizar</button>'; document.body.insertBefore(b, $('nav')); } });
     CENSO = await cargarCenso(); renderFresh(); if (DATA && ['top', 'cm', 'ficha'].includes(S.tab) && !$('dlg').open) render();
